@@ -100,5 +100,11 @@ public class Generator {
     guard let roughDrawable = roughDrawable else {
       return
     }
+    
+    guard let drawable = Drawable.from(value: roughDrawable) else {
+      return
+    }
+    
+    onDrawable?(drawable)
   }
 }
