@@ -18,14 +18,14 @@ public class Operation {
     }
     
     switch op {
-    case "move" where data.count == 2:
+    case OperationType.move.rawValue where data.count == 2:
       return Move(data: data)
-    case "lineTo" where data.count == 2:
+    case OperationType.lineTo.rawValue where data.count == 2:
       return LineTo(data: data)
-    case "bcurveTo" where data.count == 6:
-      return BCurveTo(data: data)
-    case "qcurveTo" where data.count == 4:
-      return QCurveTo(data: data)
+    case OperationType.bezierCurveTo.rawValue where data.count == 6:
+      return BezierCurveTo(data: data)
+    case OperationType.quadraticCurveTo.rawValue where data.count == 4:
+      return QuadraticCurveTo(data: data)
     default:
       return nil
     }
@@ -52,7 +52,7 @@ public class LineTo: Operation {
   }
 }
 
-public class BCurveTo: Operation {
+public class BezierCurveTo: Operation {
   public let a: Float
   public let b: Float
   public let c: Float
@@ -70,7 +70,7 @@ public class BCurveTo: Operation {
   }
 }
 
-public class QCurveTo: Operation {
+public class QuadraticCurveTo: Operation {
   public let a: Float
   public let b: Float
   public let c: Float
