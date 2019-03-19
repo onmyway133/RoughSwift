@@ -14,7 +14,7 @@ public class Operation {
       let op = dictionary["op"] as? String,
       let data = dictionary["data"] as? [Float]
     else {
-        return nil
+      return nil
     }
     
     switch op {
