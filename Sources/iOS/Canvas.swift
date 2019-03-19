@@ -10,9 +10,15 @@ import UIKit
 import JavaScriptCore
 
 public class Canvas {
-  init() {
-    let context = JSContext()!
+  private let context = JSContext()!
+
+  public init() {
     let window = JSValue(newObjectIn: context)
     context.setObject(window, forKeyedSubscript: "window" as NSString)
+    let path = Bundle.main.url(forResource: "rough", withExtension: "js")!
+    let content = try! String(contentsOf: path)
+    context.evaluateScript(content)
+    let abc = window?.objectForKeyedSubscript("rough")
+    print(abc)
   }
 }
