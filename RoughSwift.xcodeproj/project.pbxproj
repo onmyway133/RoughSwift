@@ -71,7 +71,7 @@
 		D284B1301F7906DA00D94AF3 /* Info-tvOS-Tests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-tvOS-Tests.plist"; sourceTree = "<group>"; };
 		D284B1321F7906DA00D94AF3 /* SharedTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedTests.swift; sourceTree = "<group>"; };
 		D284B1331F7906DA00D94AF3 /* Info-macOS-Tests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-macOS-Tests.plist"; sourceTree = "<group>"; };
-		D284B1361F7906DA00D94AF3 /* iOSTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOSTests.swift; sourceTree = "<group>"; };
+		D284B1361F7906DA00D94AF3 /* iOSTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = iOSTests.swift; sourceTree = "<group>"; tabWidth = 2; };
 		D284B13D1F7907AD00D94AF3 /* tvOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tvOSTests.swift; sourceTree = "<group>"; };
 		D284B1401F79081F00D94AF3 /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
 		D284B1411F79081F00D94AF3 /* Info-macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-macOS.plist"; sourceTree = "<group>"; };
