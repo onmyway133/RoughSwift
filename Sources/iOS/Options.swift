@@ -35,6 +35,8 @@ public struct Options {
   public var dashGap: Float = -1
   public var zigzagOffset: Float = -1
   
+  public init() {}
+  
   func toRoughDictionary() -> [String: Any] {
     return [
       "maxRandomnessOffset": maxRandomnessOffset,
