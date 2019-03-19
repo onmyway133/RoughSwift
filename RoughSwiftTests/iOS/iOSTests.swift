@@ -10,6 +10,14 @@ class iOSTests: XCTestCase {
     
     generator.onDrawable = { drawable in
       print(drawable)
+      XCTAssertEqual(drawable.shape, "rectangle")
+      XCTAssertEqual(drawable.sets.count, 1)
+      
+      let set = drawable.sets[0]
+      XCTAssertEqual(set.operations.count, 16)
+    
+      XCTAssertEqual(drawable.options.count, 14)
+      
       expectation.fulfill()
     }
     

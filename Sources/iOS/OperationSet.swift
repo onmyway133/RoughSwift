@@ -9,10 +9,10 @@
 import Foundation
 
 public struct OperationSet {
-  let type: OperationSetType
-  let operations: [Operation]
-  let path: String
-  let size: Size
+  public let type: OperationSetType
+  public let operations: [Operation]
+  public let path: String
+  public let size: Size
   
   static func from(dictionary: JSONDictionary) -> OperationSet? {
     guard

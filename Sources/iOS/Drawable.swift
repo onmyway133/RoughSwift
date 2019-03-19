@@ -9,9 +9,9 @@
 import Foundation
 
 public struct Drawable {
-  let shape: String
-  let sets: [OperationSet]
-  let options: JSONDictionary
+  public let shape: String
+  public let sets: [OperationSet]
+  public let options: JSONDictionary
   
   public static func from(dictionary: [String: Any]) -> Drawable? {
     guard

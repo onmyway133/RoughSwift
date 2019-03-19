@@ -12,10 +12,12 @@ public class Operation {
   static func from(dictionary: JSONDictionary) -> Operation? {
     guard
       let op = dictionary["op"] as? String,
-      let data = dictionary["data"] as? [Float]
+      let numberData = dictionary["data"] as? [NSNumber]
     else {
       return nil
     }
+    
+    let data = numberData.map({ $0.floatValue })
     
     switch op {
     case OperationType.move.rawValue where data.count == 2:
