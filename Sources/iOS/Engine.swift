@@ -36,14 +36,3 @@ public class Engine {
     return Generator(generator: value)
   }
 }
-
-public class Generator {
-  let generator: JSValue
-  init(generator: JSValue) {
-    self.generator = generator
-  }
-  
-  func rectangle(frame: CGRect) {
-    
-  }
-}
