@@ -1,0 +1,16 @@
+PODS:
+  - RoughSwift (0.1.0)
+
+DEPENDENCIES:
+  - RoughSwift (from `../../`)
+
+EXTERNAL SOURCES:
+  RoughSwift:
+    :path: "../../"
+
+SPEC CHECKSUMS:
+  RoughSwift: 7032c85c384372a732bd2bd8f341c863be2ed85f
+
+PODFILE CHECKSUM: 44b51abab2115b8cc4e6474811defbacd973280b
+
+COCOAPODS: 1.6.1
