@@ -20,14 +20,10 @@
 		D284B1461F7908B300D94AF3 /* SharedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D284B1321F7906DA00D94AF3 /* SharedTests.swift */; };
 		D284B1471F7908B800D94AF3 /* iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D284B1361F7906DA00D94AF3 /* iOSTests.swift */; };
 		D284B1481F7908BB00D94AF3 /* macOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D284B12E1F7906DA00D94AF3 /* macOSTests.swift */; };
-		D284B1491F790CA200D94AF3 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C629861C3A89A8007F7B7C /* Shared.swift */; };
-		D284B14A1F790CA200D94AF3 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C629861C3A89A8007F7B7C /* Shared.swift */; };
 		D2C7297B2240FB990018AFB0 /* rough.js in Resources */ = {isa = PBXBuildFile; fileRef = D2C7297A2240FB990018AFB0 /* rough.js */; };
 		D2C7297D2240FC180018AFB0 /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C7297C2240FC180018AFB0 /* Canvas.swift */; };
 		D5B2E8AA1C3A780C00C0327D /* RoughSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* RoughSwift.framework */; };
 		D5C6294A1C3A7FAA007F7B7C /* RoughSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629401C3A7FAA007F7B7C /* RoughSwift.framework */; };
-		D5C629871C3A89A8007F7B7C /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C629861C3A89A8007F7B7C /* Shared.swift */; };
-		D5C629881C3A89A8007F7B7C /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C629861C3A89A8007F7B7C /* Shared.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,7 +76,6 @@
 		D5B2E8A91C3A780C00C0327D /* RoughSwift-iOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RoughSwift-iOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C629401C3A7FAA007F7B7C /* RoughSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RoughSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C629491C3A7FAA007F7B7C /* RoughSwift-macOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RoughSwift-macOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5C629861C3A89A8007F7B7C /* Shared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,7 +251,6 @@
 			isa = PBXGroup;
 			children = (
 				D2C7297A2240FB990018AFB0 /* rough.js */,
-				D5C629861C3A89A8007F7B7C /* Shared.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -560,7 +554,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D284B1491F790CA200D94AF3 /* Shared.swift in Sources */,
 				D284B1231F79041C00D94AF3 /* tvOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -578,7 +571,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D284B14A1F790CA200D94AF3 /* Shared.swift in Sources */,
 				D284B1251F79042800D94AF3 /* watchOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -587,7 +579,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5C629871C3A89A8007F7B7C /* Shared.swift in Sources */,
 				D2C7297D2240FC180018AFB0 /* Canvas.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -605,7 +596,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5C629881C3A89A8007F7B7C /* Shared.swift in Sources */,
 				D284B0F61F79024300D94AF3 /* macOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
