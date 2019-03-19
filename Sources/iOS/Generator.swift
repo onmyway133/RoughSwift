@@ -8,15 +8,6 @@
 
 import JavaScriptCore
 
-public struct Point {
-  let x: Float
-  let y: Float
-  
-  func toRoughPoint() -> [Float] {
-    return [x, y]
-  }
-}
-
 public class Generator {
   private let generator: JSValue
   public init(generator: JSValue) {

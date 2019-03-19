@@ -23,6 +23,7 @@
 		D2C7297B2240FB990018AFB0 /* rough.js in Resources */ = {isa = PBXBuildFile; fileRef = D2C7297A2240FB990018AFB0 /* rough.js */; };
 		D2C7297D2240FC180018AFB0 /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C7297C2240FC180018AFB0 /* Engine.swift */; };
 		D2C7297F22411F8F0018AFB0 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C7297E22411F8F0018AFB0 /* Generator.swift */; };
+		D2C729812241247B0018AFB0 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C729802241247B0018AFB0 /* Point.swift */; };
 		D5B2E8AA1C3A780C00C0327D /* RoughSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* RoughSwift.framework */; };
 		D5C6294A1C3A7FAA007F7B7C /* RoughSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629401C3A7FAA007F7B7C /* RoughSwift.framework */; };
 /* End PBXBuildFile section */
@@ -72,6 +73,7 @@
 		D2C7297A2240FB990018AFB0 /* rough.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = rough.js; sourceTree = "<group>"; };
 		D2C7297C2240FC180018AFB0 /* Engine.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; tabWidth = 2; };
 		D2C7297E22411F8F0018AFB0 /* Generator.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; tabWidth = 2; };
+		D2C729802241247B0018AFB0 /* Point.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; tabWidth = 2; };
 		D500FD111C3AABED00782D78 /* Playground-iOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-iOS.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D500FD121C3AAC8E00782D78 /* Playground-macOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-macOS.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D5B2E89F1C3A780C00C0327D /* RoughSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RoughSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -246,6 +248,7 @@
 			children = (
 				D2C7297C2240FC180018AFB0 /* Engine.swift */,
 				D2C7297E22411F8F0018AFB0 /* Generator.swift */,
+				D2C729802241247B0018AFB0 /* Point.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -584,6 +587,7 @@
 			files = (
 				D2C7297D2240FC180018AFB0 /* Engine.swift in Sources */,
 				D2C7297F22411F8F0018AFB0 /* Generator.swift in Sources */,
+				D2C729812241247B0018AFB0 /* Point.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
