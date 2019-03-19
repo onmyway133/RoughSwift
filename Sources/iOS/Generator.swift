@@ -97,11 +97,13 @@ public class Generator {
   }
   
   private func handle(roughDrawable: JSValue?) {
-    guard let roughDrawable = roughDrawable else {
+    guard
+      let roughDrawable = roughDrawable,
+      let dictionary = roughDrawable.toDictionary() as? JSONDictionary else {
       return
     }
     
-    guard let drawable = Drawable.from(value: roughDrawable) else {
+    guard let drawable = Drawable.from(dictionary: dictionary) else {
       return
     }
     

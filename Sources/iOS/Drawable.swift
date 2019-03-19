@@ -22,13 +22,9 @@ public struct Drawable {
       return nil
     }
     
-    let operationSets: [OperationSet] = sets.compactMap({
-      return OperationSet.from(dictionary: $0)
-    })
-    
     return Drawable(
       shape: shape,
-      sets: operationSets,
+      sets: sets.compactMap({ OperationSet.from(dictionary: $0) }),
       options: options
     )
   }
