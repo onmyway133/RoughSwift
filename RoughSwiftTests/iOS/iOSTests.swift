@@ -3,7 +3,7 @@ import RoughSwift
 
 class iOSTests: XCTestCase {
   func testExample() {
-    let canvas = Canvas()
+    let engine = Engine()
   }
 
   func testPerformanceExample() {
