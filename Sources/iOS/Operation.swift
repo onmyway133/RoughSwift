@@ -9,7 +9,7 @@
 import Foundation
 
 public class Operation {
-  public static func from(dictionary: [String: Any]) -> Operation? {
+  static func from(dictionary: JSONDictionary) -> Operation? {
     guard
       let op = dictionary["op"] as? String,
       let data = dictionary["data"] as? [Float]

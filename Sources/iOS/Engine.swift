@@ -9,6 +9,9 @@
 import UIKit
 import JavaScriptCore
 
+typealias JSONDictionary = [String: Any]
+typealias JSONArray = [JSONDictionary]
+
 public class Engine {
   private let context = JSContext()!
   private let rough: JSValue

@@ -28,6 +28,9 @@
 		D2C729852241297E0018AFB0 /* Drawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C729842241297E0018AFB0 /* Drawable.swift */; };
 		D2C7298722412D130018AFB0 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C7298622412D130018AFB0 /* Operation.swift */; };
 		D2C72989224132530018AFB0 /* OperationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C72988224132530018AFB0 /* OperationType.swift */; };
+		D2C7298B224135330018AFB0 /* OperationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C7298A224135330018AFB0 /* OperationSet.swift */; };
+		D2C7298D224135420018AFB0 /* OperationSetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C7298C224135420018AFB0 /* OperationSetType.swift */; };
+		D2C7298F224135D10018AFB0 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C7298E224135D10018AFB0 /* Size.swift */; };
 		D5B2E8AA1C3A780C00C0327D /* RoughSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* RoughSwift.framework */; };
 		D5C6294A1C3A7FAA007F7B7C /* RoughSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629401C3A7FAA007F7B7C /* RoughSwift.framework */; };
 /* End PBXBuildFile section */
@@ -82,6 +85,9 @@
 		D2C729842241297E0018AFB0 /* Drawable.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Drawable.swift; sourceTree = "<group>"; tabWidth = 2; };
 		D2C7298622412D130018AFB0 /* Operation.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; tabWidth = 2; };
 		D2C72988224132530018AFB0 /* OperationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationType.swift; sourceTree = "<group>"; };
+		D2C7298A224135330018AFB0 /* OperationSet.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = OperationSet.swift; sourceTree = "<group>"; tabWidth = 2; };
+		D2C7298C224135420018AFB0 /* OperationSetType.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = OperationSetType.swift; sourceTree = "<group>"; tabWidth = 2; };
+		D2C7298E224135D10018AFB0 /* Size.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; tabWidth = 2; };
 		D500FD111C3AABED00782D78 /* Playground-iOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-iOS.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D500FD121C3AAC8E00782D78 /* Playground-macOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-macOS.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D5B2E89F1C3A780C00C0327D /* RoughSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RoughSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -261,6 +267,9 @@
 				D2C729842241297E0018AFB0 /* Drawable.swift */,
 				D2C7298622412D130018AFB0 /* Operation.swift */,
 				D2C72988224132530018AFB0 /* OperationType.swift */,
+				D2C7298A224135330018AFB0 /* OperationSet.swift */,
+				D2C7298C224135420018AFB0 /* OperationSetType.swift */,
+				D2C7298E224135D10018AFB0 /* Size.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -599,8 +608,11 @@
 			files = (
 				D2C72983224124B80018AFB0 /* Options.swift in Sources */,
 				D2C7297D2240FC180018AFB0 /* Engine.swift in Sources */,
+				D2C7298B224135330018AFB0 /* OperationSet.swift in Sources */,
 				D2C7297F22411F8F0018AFB0 /* Generator.swift in Sources */,
+				D2C7298D224135420018AFB0 /* OperationSetType.swift in Sources */,
 				D2C729812241247B0018AFB0 /* Point.swift in Sources */,
+				D2C7298F224135D10018AFB0 /* Size.swift in Sources */,
 				D2C72989224132530018AFB0 /* OperationType.swift in Sources */,
 				D2C729852241297E0018AFB0 /* Drawable.swift in Sources */,
 				D2C7298722412D130018AFB0 /* Operation.swift in Sources */,

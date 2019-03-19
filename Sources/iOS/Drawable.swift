@@ -7,38 +7,29 @@
 //
 
 import Foundation
-import JavaScriptCore
 
 public struct Drawable {
   let shape: String
-  let type: String
-  let operations: [Operation]
-  let options: [String: Any]
+  let sets: [OperationSet]
+  let options: JSONDictionary
   
-  public static func from(value: JSValue) -> Drawable? {
+  public static func from(dictionary: [String: Any]) -> Drawable? {
     guard
-      let shape = value.objectForKeyedSubscript("shape")?.toString(),
-      let sets = value.objectForKeyedSubscript("sets"),
-      let options = value.objectForKeyedSubscript("options"),
-      let type = sets.objectForKeyedSubscript("type"),
-      let ops = sets.objectForKeyedSubscript("ops")?.toArray()
+      let shape = dictionary["shape"] as? String,
+      let sets = dictionary["sets"] as? JSONArray,
+      let options = dictionary["options"] as? JSONDictionary
     else {
       return nil
     }
     
-    let operations: [Operation] = ops.compactMap({
-      guard let dictionary = $0 as? [String: Any] else {
-        return nil
-      }
-      
-      return Operation.from(dictionary: dictionary)
+    let operationSets: [OperationSet] = sets.compactMap({
+      return OperationSet.from(dictionary: $0)
     })
     
     return Drawable(
       shape: shape,
-      type: type.toString(),
-      operations: operations,
-      options: options.toDictionary() as? [String: Any] ?? [:]
+      sets: operationSets,
+      options: options
     )
   }
 }
