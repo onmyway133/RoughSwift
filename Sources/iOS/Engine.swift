@@ -26,7 +26,7 @@ public class Engine {
     rough = context.objectForKeyedSubscript("rough")!
   }
   
-  func generator(size: CGSize) -> Generator {
+  public func generator(size: CGSize) -> Generator {
     let drawingSurface: [String: Any] = [
       "width": size.width,
       "height": size.height

@@ -4,6 +4,8 @@ import RoughSwift
 class iOSTests: XCTestCase {
   func testExample() {
     let engine = Engine()
+    let generator = engine.generator(size: CGSize(width: 300, height: 300))
+    generator.rectangle(x: 10, y: 20, width: 100, height: 200)
   }
 
   func testPerformanceExample() {
