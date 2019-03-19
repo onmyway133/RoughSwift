@@ -15,10 +15,12 @@ public class Canvas {
   public init() {
     let window = JSValue(newObjectIn: context)
     context.setObject(window, forKeyedSubscript: "window" as NSString)
-    let path = Bundle.main.url(forResource: "rough", withExtension: "js")!
+    let bundle = Bundle(for: Canvas.self)
+    let path = bundle.url(forResource: "rough", withExtension: "js")!
     let content = try! String(contentsOf: path)
     context.evaluateScript(content)
-    let abc = window?.objectForKeyedSubscript("rough")
-    print(abc)
+    let rough = window?.objectForKeyedSubscript("rough")
+    
+    rough?.invokeMethod("rectangle", withArguments: [10, 10, 200, 200])
   }
 }
