@@ -40,6 +40,8 @@ public class Renderer {
       
       path.lineWidth = CGFloat(fweight)
       layer.strokeColor = UIColor(hex: options.stroke.toHex()).cgColor
+    case .fillPath:
+      layer.fillColor = options.fill.cgColor
     default:
       break
     }
