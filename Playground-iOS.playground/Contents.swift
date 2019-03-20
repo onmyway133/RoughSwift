@@ -6,13 +6,13 @@ import PlaygroundSupport
 
 let size = CGSize(width: 300, height: 300)
 let view = UIView(frame: CGRect(origin: .zero, size: size))
-let engine = Engine()
-let generator = engine.generator(size: size)
-let renderer = Renderer(layer: view.layer)
-generator.onDrawable = renderer.handle
+view.backgroundColor = .white
 
-var options = Options()
-options.fill = "abc"
-generator.rectangle(x: 10, y: 10, width: 50, height: 50, options: options)
+let layer = draw(size: size, using: { generator in
+  var options = Options()
+  options.fill = UIColor.red
+  generator.circle(x: 200, y: 200, diameter: 80, options: options)
+})
 
+view.layer.addSublayer(layer)
 PlaygroundPage.current.liveView = view
