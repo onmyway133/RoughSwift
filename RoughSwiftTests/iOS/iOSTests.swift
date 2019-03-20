@@ -46,7 +46,7 @@ class iOSTests: XCTestCase {
     options.hachureAngle = 60
     options.hachureGap = 8
     options.fillStyle = .zigzag
-    options.fill = "red"
+    options.fill = UIColor.red
     generator.circle(x: 50, y: 150, diameter: 80, options: options)
     wait(for: [expectation], timeout: 1)
   }
@@ -62,8 +62,8 @@ class iOSTests: XCTestCase {
     generator.onDrawable = renderer.handle
     
     var options = Options()
-    options.fill = "rgb(10,150,10)"
-    options.stroke = "green"
+    options.fill = UIColor.red
+    options.stroke = UIColor.green
     generator.rectangle(x: 10, y: 10, width: 50, height: 50, options: options)
     
     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5, execute: {
@@ -75,10 +75,13 @@ class iOSTests: XCTestCase {
   }
   
   func testDrawCircle() {
-    let layer = draw(size: CGSize(width: 300, height: 300), draw: { generator in
+    let size = CGSize(width: 300, height: 300)
+    let layer = draw(size: size, draw: { generator in
       var options = Options()
-      options.fill = 'red'
-      rc.circle(50, 50, 80, { fill: 'red' }); // fill with red hachure
+      options.fill = UIColor.red
+      generator.circle(x: 50, y: 50, diameter: 80, options: options)
     })
+    
+    XCTAssertEqual(layer.frame.size, size)
   }
 }
