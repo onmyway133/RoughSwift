@@ -11,6 +11,8 @@ let generator = engine.generator(size: size)
 let renderer = Renderer(layer: view.layer)
 generator.onDrawable = renderer.handle
 
-generator.rectangle(x: 10, y: 10, width: 50, height: 50)
+var options = Options()
+options.fill = "abc"
+generator.rectangle(x: 10, y: 10, width: 50, height: 50, options: options)
 
 PlaygroundPage.current.liveView = view

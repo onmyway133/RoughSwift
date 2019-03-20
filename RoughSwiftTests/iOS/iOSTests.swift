@@ -53,4 +53,21 @@ class iOSTests: XCTestCase {
     generator.circle(x: 50, y: 150, diameter: 80, options: options)
     wait(for: [expectation], timeout: 1)
   }
+  
+  func testRenderer() {
+    let expectation = self.expectation(description: "")
+
+    let size = CGSize(width: 300, height: 300)
+    let view = UIView(frame: CGRect(origin: .zero, size: size))
+    let engine = Engine()
+    let generator = engine.generator(size: size)
+    let renderer = Renderer(layer: view.layer)
+    generator.onDrawable = renderer.handle
+    
+    var options = Options()
+    options.fill = "rgb(10,150,10)"
+    generator.rectangle(x: 10, y: 10, width: 50, height: 50, options: options)
+    
+    wait(for: [expectation], timeout: 1)
+  }
 }
