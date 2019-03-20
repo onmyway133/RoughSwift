@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   # s.watchos.deployment_target = "3.0"
 
   s.requires_arc = true
-  s.ios.source_files = 'Sources/iOS/**/*'
+  s.ios.source_files = 'Sources/{Shared,iOS}/**/*'
   s.resources  = 'Sources/Shared/*.js}'
 
   # s.tvos.source_files = 'Sources/{iOS,tvOS,Shared}/**/*'

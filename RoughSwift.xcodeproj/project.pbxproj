@@ -21,16 +21,16 @@
 		D284B1471F7908B800D94AF3 /* iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D284B1361F7906DA00D94AF3 /* iOSTests.swift */; };
 		D284B1481F7908BB00D94AF3 /* macOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D284B12E1F7906DA00D94AF3 /* macOSTests.swift */; };
 		D2C7297B2240FB990018AFB0 /* rough.js in Resources */ = {isa = PBXBuildFile; fileRef = D2C7297A2240FB990018AFB0 /* rough.js */; };
-		D2C7297D2240FC180018AFB0 /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C7297C2240FC180018AFB0 /* Engine.swift */; };
-		D2C7297F22411F8F0018AFB0 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C7297E22411F8F0018AFB0 /* Generator.swift */; };
-		D2C729812241247B0018AFB0 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C729802241247B0018AFB0 /* Point.swift */; };
-		D2C72983224124B80018AFB0 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C72982224124B80018AFB0 /* Options.swift */; };
-		D2C729852241297E0018AFB0 /* Drawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C729842241297E0018AFB0 /* Drawable.swift */; };
-		D2C7298722412D130018AFB0 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C7298622412D130018AFB0 /* Operation.swift */; };
-		D2C72989224132530018AFB0 /* OperationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C72988224132530018AFB0 /* OperationType.swift */; };
-		D2C7298B224135330018AFB0 /* OperationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C7298A224135330018AFB0 /* OperationSet.swift */; };
-		D2C7298D224135420018AFB0 /* OperationSetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C7298C224135420018AFB0 /* OperationSetType.swift */; };
-		D2C7298F224135D10018AFB0 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C7298E224135D10018AFB0 /* Size.swift */; };
+		D2CD122822423BBF00681C5F /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CD121E22423BBF00681C5F /* Options.swift */; };
+		D2CD122922423BBF00681C5F /* Drawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CD121F22423BBF00681C5F /* Drawable.swift */; };
+		D2CD122A22423BBF00681C5F /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CD122022423BBF00681C5F /* Engine.swift */; };
+		D2CD122B22423BBF00681C5F /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CD122122423BBF00681C5F /* Generator.swift */; };
+		D2CD122C22423BBF00681C5F /* OperationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CD122222423BBF00681C5F /* OperationSet.swift */; };
+		D2CD122D22423BBF00681C5F /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CD122322423BBF00681C5F /* Point.swift */; };
+		D2CD122E22423BBF00681C5F /* OperationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CD122422423BBF00681C5F /* OperationType.swift */; };
+		D2CD122F22423BBF00681C5F /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CD122522423BBF00681C5F /* Size.swift */; };
+		D2CD123022423BBF00681C5F /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CD122622423BBF00681C5F /* Operation.swift */; };
+		D2CD123122423BBF00681C5F /* OperationSetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CD122722423BBF00681C5F /* OperationSetType.swift */; };
 		D5B2E8AA1C3A780C00C0327D /* RoughSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* RoughSwift.framework */; };
 		D5C6294A1C3A7FAA007F7B7C /* RoughSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629401C3A7FAA007F7B7C /* RoughSwift.framework */; };
 /* End PBXBuildFile section */
@@ -78,16 +78,16 @@
 		D284B1421F79081F00D94AF3 /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 		D284B1431F79081F00D94AF3 /* Info-watchOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-watchOS.plist"; sourceTree = "<group>"; };
 		D2C7297A2240FB990018AFB0 /* rough.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = rough.js; sourceTree = "<group>"; };
-		D2C7297C2240FC180018AFB0 /* Engine.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; tabWidth = 2; };
-		D2C7297E22411F8F0018AFB0 /* Generator.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; tabWidth = 2; };
-		D2C729802241247B0018AFB0 /* Point.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; tabWidth = 2; };
-		D2C72982224124B80018AFB0 /* Options.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; tabWidth = 2; };
-		D2C729842241297E0018AFB0 /* Drawable.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Drawable.swift; sourceTree = "<group>"; tabWidth = 2; };
-		D2C7298622412D130018AFB0 /* Operation.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; tabWidth = 2; };
-		D2C72988224132530018AFB0 /* OperationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationType.swift; sourceTree = "<group>"; };
-		D2C7298A224135330018AFB0 /* OperationSet.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = OperationSet.swift; sourceTree = "<group>"; tabWidth = 2; };
-		D2C7298C224135420018AFB0 /* OperationSetType.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = OperationSetType.swift; sourceTree = "<group>"; tabWidth = 2; };
-		D2C7298E224135D10018AFB0 /* Size.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; tabWidth = 2; };
+		D2CD121E22423BBF00681C5F /* Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
+		D2CD121F22423BBF00681C5F /* Drawable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drawable.swift; sourceTree = "<group>"; };
+		D2CD122022423BBF00681C5F /* Engine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
+		D2CD122122423BBF00681C5F /* Generator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
+		D2CD122222423BBF00681C5F /* OperationSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationSet.swift; sourceTree = "<group>"; };
+		D2CD122322423BBF00681C5F /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		D2CD122422423BBF00681C5F /* OperationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationType.swift; sourceTree = "<group>"; };
+		D2CD122522423BBF00681C5F /* Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
+		D2CD122622423BBF00681C5F /* Operation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
+		D2CD122722423BBF00681C5F /* OperationSetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationSetType.swift; sourceTree = "<group>"; };
 		D500FD111C3AABED00782D78 /* Playground-iOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-iOS.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D500FD121C3AAC8E00782D78 /* Playground-macOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-macOS.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D5B2E89F1C3A780C00C0327D /* RoughSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RoughSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -260,16 +260,6 @@
 		D5C6296A1C3A809D007F7B7C /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				D2C7297C2240FC180018AFB0 /* Engine.swift */,
-				D2C7297E22411F8F0018AFB0 /* Generator.swift */,
-				D2C729802241247B0018AFB0 /* Point.swift */,
-				D2C72982224124B80018AFB0 /* Options.swift */,
-				D2C729842241297E0018AFB0 /* Drawable.swift */,
-				D2C7298622412D130018AFB0 /* Operation.swift */,
-				D2C72988224132530018AFB0 /* OperationType.swift */,
-				D2C7298A224135330018AFB0 /* OperationSet.swift */,
-				D2C7298C224135420018AFB0 /* OperationSetType.swift */,
-				D2C7298E224135D10018AFB0 /* Size.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -277,6 +267,16 @@
 		D5C6296E1C3A809D007F7B7C /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				D2CD121F22423BBF00681C5F /* Drawable.swift */,
+				D2CD122022423BBF00681C5F /* Engine.swift */,
+				D2CD122122423BBF00681C5F /* Generator.swift */,
+				D2CD122622423BBF00681C5F /* Operation.swift */,
+				D2CD122222423BBF00681C5F /* OperationSet.swift */,
+				D2CD122722423BBF00681C5F /* OperationSetType.swift */,
+				D2CD122422423BBF00681C5F /* OperationType.swift */,
+				D2CD121E22423BBF00681C5F /* Options.swift */,
+				D2CD122322423BBF00681C5F /* Point.swift */,
+				D2CD122522423BBF00681C5F /* Size.swift */,
 				D2C7297A2240FB990018AFB0 /* rough.js */,
 			);
 			path = Shared;
@@ -483,7 +483,7 @@
 					};
 					D5B2E89E1C3A780C00C0327D = {
 						CreatedOnToolsVersion = 7.2;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1010;
 					};
 					D5B2E8A81C3A780C00C0327D = {
 						CreatedOnToolsVersion = 7.2;
@@ -606,16 +606,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2C72983224124B80018AFB0 /* Options.swift in Sources */,
-				D2C7297D2240FC180018AFB0 /* Engine.swift in Sources */,
-				D2C7298B224135330018AFB0 /* OperationSet.swift in Sources */,
-				D2C7297F22411F8F0018AFB0 /* Generator.swift in Sources */,
-				D2C7298D224135420018AFB0 /* OperationSetType.swift in Sources */,
-				D2C729812241247B0018AFB0 /* Point.swift in Sources */,
-				D2C7298F224135D10018AFB0 /* Size.swift in Sources */,
-				D2C72989224132530018AFB0 /* OperationType.swift in Sources */,
-				D2C729852241297E0018AFB0 /* Drawable.swift in Sources */,
-				D2C7298722412D130018AFB0 /* Operation.swift in Sources */,
+				D2CD122F22423BBF00681C5F /* Size.swift in Sources */,
+				D2CD122C22423BBF00681C5F /* OperationSet.swift in Sources */,
+				D2CD123122423BBF00681C5F /* OperationSetType.swift in Sources */,
+				D2CD122822423BBF00681C5F /* Options.swift in Sources */,
+				D2CD122D22423BBF00681C5F /* Point.swift in Sources */,
+				D2CD122B22423BBF00681C5F /* Generator.swift in Sources */,
+				D2CD123022423BBF00681C5F /* Operation.swift in Sources */,
+				D2CD122E22423BBF00681C5F /* OperationType.swift in Sources */,
+				D2CD122A22423BBF00681C5F /* Engine.swift in Sources */,
+				D2CD122922423BBF00681C5F /* Drawable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -992,6 +992,7 @@
 		D5B2E8B71C3A780C00C0327D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/RoughSwiftTests/Info-iOS-Tests.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
@@ -1005,6 +1006,7 @@
 		D5B2E8B81C3A780C00C0327D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/RoughSwiftTests/Info-iOS-Tests.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
