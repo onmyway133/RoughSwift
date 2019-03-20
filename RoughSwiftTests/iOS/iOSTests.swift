@@ -89,7 +89,7 @@ class iOSTests: XCTestCase {
     let size = CGSize(width: 300, height: 300)
     let layer = draw(size: size, using: { generator in
       var options = Options()
-      options.fill = UIColor.red
+      options.fill = UIColor.green
       generator.circle(x: 50, y: 50, diameter: 80, options: options)
     })
     
