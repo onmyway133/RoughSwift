@@ -23,7 +23,7 @@ public struct Options {
   public var maxRandomnessOffset: Float = 2
   public var roughness: Float = 1
   public var bowing: Float = 1
-  public var fill: UIColor = .white
+  public var fill: UIColor = .clear
   public var stroke: UIColor = .black
   public var strokeWidth: Float = 1
   public var curveTightness: Float = 0

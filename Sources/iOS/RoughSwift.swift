@@ -9,7 +9,7 @@
 import UIKit
 
 /// Setup the whole stack, you just need to specify shapes to draw
-public func draw(size: CGSize, draw: (Generator) -> Void) -> CALayer {
+public func draw(size: CGSize, using: (Generator) -> Void) -> CALayer {
   let layer = CALayer()
   layer.frame.size = size
   
@@ -17,6 +17,6 @@ public func draw(size: CGSize, draw: (Generator) -> Void) -> CALayer {
   let renderer = Renderer(layer: layer)
   generator.onDrawable = renderer.handle
   
-  draw(generator)
+  using(generator)
   return layer
 }
