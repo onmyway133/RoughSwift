@@ -13,6 +13,11 @@ extension UIColor {
   ///
   /// - Parameter hex: A hex string, can either contain # or not
   convenience init(hex string: String) {
+    if (string == "none") {
+      self.init(cgColor: UIColor.clear.cgColor)
+      return
+    }
+    
     var hex = string.hasPrefix("#")
       ? String(string.dropFirst())
       : string
