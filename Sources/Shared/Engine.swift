@@ -30,7 +30,7 @@ public class Engine {
   }
   
   public func generator(size: CGSize) -> Generator {
-    let drawingSurface: [String: Any] = [
+    let drawingSurface: JSONDictionary = [
       "width": size.width,
       "height": size.height
     ]

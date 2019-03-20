@@ -11,9 +11,9 @@ import Foundation
 public struct Drawable {
   public let shape: String
   public let sets: [OperationSet]
-  public let options: JSONDictionary
+  public let options: Options
   
-  public static func from(dictionary: [String: Any]) -> Drawable? {
+  public static func from(dictionary: JSONDictionary) -> Drawable? {
     guard
       let shape = dictionary["shape"] as? String,
       let sets = dictionary["sets"] as? JSONArray,
@@ -25,7 +25,7 @@ public struct Drawable {
     return Drawable(
       shape: shape,
       sets: sets.compactMap({ OperationSet.from(dictionary: $0) }),
-      options: options
+      options: Options.from(dictionary: options)
     )
   }
 }
