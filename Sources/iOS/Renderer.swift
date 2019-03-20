@@ -26,6 +26,7 @@ public class Renderer {
   private func shapeLayer(set: OperationSet, options: Options) -> CAShapeLayer {
     let layer = CAShapeLayer()
     let path = UIBezierPath()
+    layer.fillColor = nil
     
     switch set.type {
     case .path:
