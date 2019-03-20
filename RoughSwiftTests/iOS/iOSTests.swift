@@ -33,7 +33,7 @@ class iOSTests: XCTestCase {
       XCTAssertEqual(drawable.sets.count, 2)
       
       let set = drawable.sets[0]
-      XCTAssertEqual(set.operations.count, 76)
+      XCTAssertEqual(set.operations.count, 68)
       
       XCTAssertEqual(drawable.options.fillStyle, .zigzag)
       XCTAssertEqual(drawable.options.hachureAngle, 60)

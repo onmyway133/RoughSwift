@@ -15,6 +15,8 @@ public typealias JSONArray = [JSONDictionary]
 public class Engine {
   private let context = JSContext()!
   private let rough: JSValue
+    
+  public static let shared = Engine()
 
   public init() {
     let bundle = Bundle(for: Engine.self)
