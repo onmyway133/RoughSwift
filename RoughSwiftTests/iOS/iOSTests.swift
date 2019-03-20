@@ -10,12 +10,10 @@ class iOSTests: XCTestCase {
     
     generator.onDrawable = { drawable in
       XCTAssertEqual(drawable.shape, "rectangle")
-      XCTAssertEqual(drawable.sets.count, 1)
+      XCTAssertEqual(drawable.sets.count, 2)
       
       let set = drawable.sets[0]
-      XCTAssertEqual(set.operations.count, 16)
-    
-      XCTAssertEqual(drawable.options.count, 14)
+      XCTAssertEqual(set.operations.count, 208)
       
       expectation.fulfill()
     }
@@ -32,15 +30,14 @@ class iOSTests: XCTestCase {
     
     generator.onDrawable = { drawable in
       XCTAssertEqual(drawable.shape, "circle")
-      XCTAssertEqual(drawable.sets.count, 1)
+      XCTAssertEqual(drawable.sets.count, 2)
       
       let set = drawable.sets[0]
-      XCTAssertEqual(set.operations.count, 22)
+      XCTAssertEqual(set.operations.count, 76)
       
-      XCTAssertEqual(drawable.options.count, 14)
-      XCTAssertEqual(drawable.options["fillStyle"] as? String, "zigzag")
-      XCTAssertEqual(drawable.options["hachureAngle"] as? NSNumber, 60)
-      XCTAssertEqual(drawable.options["hachureGap"] as? NSNumber, 8)
+      XCTAssertEqual(drawable.options.fillStyle, .zigzag)
+      XCTAssertEqual(drawable.options.hachureAngle, 60)
+      XCTAssertEqual(drawable.options.hachureGap, 8)
       
       expectation.fulfill()
     }
@@ -69,6 +66,11 @@ class iOSTests: XCTestCase {
     options.stroke = "green"
     generator.rectangle(x: 10, y: 10, width: 50, height: 50, options: options)
     
+    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.9, execute: {
+      let abc = view
+      expectation.fulfill()
+    })
+
     wait(for: [expectation], timeout: 1)
   }
 }

@@ -17,15 +17,26 @@ public class Renderer {
   
   public func handle(drawable: Drawable) {
     drawable.sets.forEach { set in
-      set.operations.forEach { op in
-        let path = handle(op: op)
-      }
+      let shapeLayer = self.shapeLayer(set: set, options: drawable.options)
+      layer.addSublayer(shapeLayer)
     }
   }
   
-  private func handle(op: Operation) -> UIBezierPath {
+  private func shapeLayer(set: OperationSet, options: Options) -> CAShapeLayer {
+    let layer = CAShapeLayer()
     let path = UIBezierPath()
     
+    path.lineWidth = CGFloat(options.strokeWidth)
+    layer.strokeColor = UIColor(hex: options.stroke).cgColor
+
+    set.operations.forEach { op in
+      operate(op: op, path: path)
+    }
+    
+    return layer
+  }
+  
+  private func operate(op: Operation, path: UIBezierPath) {
     switch op {
     case let op as Move:
       path.move(to: op.point.toCGPoint())
@@ -45,8 +56,6 @@ public class Renderer {
     default:
       break
     }
-    
-    return path
   }
 }
 
