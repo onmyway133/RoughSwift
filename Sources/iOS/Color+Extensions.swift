@@ -46,6 +46,10 @@ extension UIColor {
     
     let multiplier = CGFloat(255.999999)
     
+    guard !self.isEqual(UIColor.clear) else {
+      return "none"
+    }
+    
     guard self.getRed(&red, green: &green, blue: &blue, alpha: &alpha) else {
       return "none"
     }
