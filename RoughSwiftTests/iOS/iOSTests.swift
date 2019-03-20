@@ -122,4 +122,13 @@ class iOSTests: XCTestCase {
     
     XCTAssertEqual(layer.frame.size, size)
   }
+  
+  func testPath() {
+    let size = CGSize(width: 300, height: 300)
+    let layer = draw(size: size, using: { generator in
+      generator.path(d: "M80 80 A 45 45, 0, 0, 0, 125 125 L 125 80 Z")
+    })
+    
+    XCTAssertEqual(layer.frame.size, size)
+  }
 }

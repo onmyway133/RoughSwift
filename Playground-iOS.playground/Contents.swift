@@ -14,16 +14,21 @@ let layer = draw(size: size, using: { generator in
   options.fillStyle = .zigzag
   generator.circle(x: 200, y: 200, diameter: 80, options: options)
     
-  options.fillStyle = .sunburst
-  options.hachureAngle = 120
-  options.hachureGap = 4
+  options.fill = UIColor.purple
+  options.fillStyle = .hachure
+  generator.circle(x: 200, y: 100, diameter: 80, options: options)
+    
+  options.fillStyle = .starBurst
   options.fill = UIColor.blue
   generator.rectangle(x: 10, y: 10, width: 100, height: 50, options: options)
     
   options.fill = UIColor.green
   options.fillStyle = .crossHatch
   options.stroke = UIColor.brown
-  generator.ellipse(x: 80, y: 100, width: 100, height: 50, options: options)
+  generator.ellipse(x: 80, y: 170, width: 100, height: 50, options: options)
+  
+  options.stroke = UIColor.yellow
+  generator.path(d: "M80 80 A 45 45, 0, 0, 0, 125 125 L 125 80 Z")
 })
 
 view.layer.addSublayer(layer)
