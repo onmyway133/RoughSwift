@@ -39,7 +39,7 @@ public class Renderer {
       }
       
       path.lineWidth = CGFloat(fweight)
-      layer.strokeColor = options.stroke.cgColor
+      layer.strokeColor = options.fill.cgColor
     case .fillPath:
       layer.fillColor = options.fill.cgColor
     case .path2DFill, .path2DPattern:
