@@ -48,6 +48,7 @@ public struct Options {
       "roughness": roughness,
       "bowing": bowing,
       "stroke": stroke,
+      "fill": fill,
       "strokeWidth": strokeWidth,
       "curveTightness": curveTightness,
       "curveStepCount": curveStepCount,
@@ -64,6 +65,25 @@ public struct Options {
   static func from(dictionary: JSONDictionary) -> Options {
     var options = Options()
     options.maxRandomnessOffset <-? (dictionary["maxRandomnessOffset"] as? NSNumber)?.floatValue
+    options.roughness <-? (dictionary["roughness"] as? NSNumber)?.floatValue
+    options.bowing <-? (dictionary["bowing"] as? NSNumber)?.floatValue
+    options.stroke <-? (dictionary["maxRandomnessOffset"] as? String)
+    options.fill <-? (dictionary["fill"] as? String)
+    options.strokeWidth <-? (dictionary["strokeWidth"] as? NSNumber)?.floatValue
+    options.curveTightness <-? (dictionary["curveTightness"] as? NSNumber)?.floatValue
+    options.curveStepCount <-? (dictionary["curveStepCount"] as? NSNumber)?.floatValue
+    options.fillWeight <-? (dictionary["fillWeight"] as? NSNumber)?.floatValue
+    options.hachureAngle <-? (dictionary["hachureAngle"] as? NSNumber)?.floatValue
+    options.hachureGap <-? (dictionary["hachureGap"] as? NSNumber)?.floatValue
+    options.dashOffset <-? (dictionary["dashOffset"] as? NSNumber)?.floatValue
+    options.dashGap <-? (dictionary["dashGap"] as? NSNumber)?.floatValue
+    options.zigzagOffset <-? (dictionary["zigzagOffset"] as? NSNumber)?.floatValue
+    
+    if let fillStyleRawValue = dictionary["fillStyle"] as? String,
+      let fillStyle = FillStyle(rawValue: fillStyleRawValue) {
+      options.fillStyle = fillStyle
+    }
+    
     return options
   }
 }
