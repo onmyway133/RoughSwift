@@ -35,6 +35,7 @@
 		D2CD12352242494E00681C5F /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CD12342242494E00681C5F /* Color+Extensions.swift */; };
 		D2CD123722424B7D00681C5F /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CD123622424B7D00681C5F /* Operator.swift */; };
 		D2CD12392242595C00681C5F /* RoughSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CD12382242595C00681C5F /* RoughSwift.swift */; };
+		D2CD123B224266BE00681C5F /* FillStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CD123A224266BE00681C5F /* FillStyle.swift */; };
 		D5B2E8AA1C3A780C00C0327D /* RoughSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* RoughSwift.framework */; };
 		D5C6294A1C3A7FAA007F7B7C /* RoughSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629401C3A7FAA007F7B7C /* RoughSwift.framework */; };
 /* End PBXBuildFile section */
@@ -96,6 +97,7 @@
 		D2CD12342242494E00681C5F /* Color+Extensions.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; tabWidth = 2; };
 		D2CD123622424B7D00681C5F /* Operator.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Operator.swift; sourceTree = "<group>"; tabWidth = 2; };
 		D2CD12382242595C00681C5F /* RoughSwift.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = RoughSwift.swift; sourceTree = "<group>"; tabWidth = 2; };
+		D2CD123A224266BE00681C5F /* FillStyle.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = FillStyle.swift; sourceTree = "<group>"; tabWidth = 2; };
 		D500FD111C3AABED00782D78 /* Playground-iOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-iOS.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D500FD121C3AAC8E00782D78 /* Playground-macOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-macOS.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D5B2E89F1C3A780C00C0327D /* RoughSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RoughSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -290,6 +292,7 @@
 				D2CD122522423BBF00681C5F /* Size.swift */,
 				D2C7297A2240FB990018AFB0 /* rough.js */,
 				D2CD123622424B7D00681C5F /* Operator.swift */,
+				D2CD123A224266BE00681C5F /* FillStyle.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -619,6 +622,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2CD122F22423BBF00681C5F /* Size.swift in Sources */,
+				D2CD123B224266BE00681C5F /* FillStyle.swift in Sources */,
 				D2CD122C22423BBF00681C5F /* OperationSet.swift in Sources */,
 				D2CD123722424B7D00681C5F /* Operator.swift in Sources */,
 				D2CD123122423BBF00681C5F /* OperationSetType.swift in Sources */,
