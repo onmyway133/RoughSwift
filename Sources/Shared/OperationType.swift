@@ -9,8 +9,8 @@
 import Foundation
 
 public enum OperationType: String {
-    case move
-    case bezierCurveTo = "bcurveTo"
-    case lineTo
-    case quadraticCurveTo = "qcurveTo"
+  case move
+  case bezierCurveTo = "bcurveTo"
+  case lineTo
+  case quadraticCurveTo = "qcurveTo"
 }
