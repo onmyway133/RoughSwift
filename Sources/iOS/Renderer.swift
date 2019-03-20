@@ -31,7 +31,7 @@ public class Renderer {
     switch set.type {
     case .path:
       path.lineWidth = CGFloat(options.strokeWidth)
-      layer.strokeColor = UIColor(hex: options.stroke.toHex()).cgColor
+      layer.strokeColor = options.stroke.cgColor
     case .fillSketch:
       var fweight = options.fillWeight
       if (fweight < 0) {
@@ -39,7 +39,7 @@ public class Renderer {
       }
       
       path.lineWidth = CGFloat(fweight)
-      layer.strokeColor = UIColor(hex: options.stroke.toHex()).cgColor
+      layer.strokeColor = options.stroke.cgColor
     case .fillPath:
       layer.fillColor = options.fill.cgColor
     case .path2DFill, .path2DPattern:
