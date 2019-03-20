@@ -11,8 +11,6 @@ import Foundation
 public struct OperationSet {
   public let type: OperationSetType
   public let operations: [Operation]
-  public let path: String
-  public let size: Size
   
   static func from(dictionary: JSONDictionary) -> OperationSet? {
     guard
@@ -25,9 +23,7 @@ public struct OperationSet {
     
     return OperationSet(
       type: type,
-      operations: ops.compactMap({ Operation.from(dictionary: $0) }),
-      path: "",
-      size: Size(width: 0, height: 0)
+      operations: ops.compactMap({ Operation.from(dictionary: $0) })
     )
   }
 }
