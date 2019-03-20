@@ -108,4 +108,18 @@ class iOSTests: XCTestCase {
     
     XCTAssertEqual(layer.frame.size, size)
   }
+  
+  func testDrawFillingHachureGap() {
+    let size = CGSize(width: 300, height: 300)
+    let layer = draw(size: size, using: { generator in
+      var options = Options()
+      options.fill = UIColor.red
+      options.hachureAngle = 60
+      options.hachureGap = 8
+      
+      generator.rectangle(x: 100, y: 100, width: 80, height: 80, options: options)
+    })
+    
+    XCTAssertEqual(layer.frame.size, size)
+  }
 }
