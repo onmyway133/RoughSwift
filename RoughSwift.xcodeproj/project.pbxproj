@@ -31,6 +31,7 @@
 		D2CD122F22423BBF00681C5F /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CD122522423BBF00681C5F /* Size.swift */; };
 		D2CD123022423BBF00681C5F /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CD122622423BBF00681C5F /* Operation.swift */; };
 		D2CD123122423BBF00681C5F /* OperationSetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CD122722423BBF00681C5F /* OperationSetType.swift */; };
+		D2CD123322423E8B00681C5F /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CD123222423E8B00681C5F /* Renderer.swift */; };
 		D5B2E8AA1C3A780C00C0327D /* RoughSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* RoughSwift.framework */; };
 		D5C6294A1C3A7FAA007F7B7C /* RoughSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629401C3A7FAA007F7B7C /* RoughSwift.framework */; };
 /* End PBXBuildFile section */
@@ -86,8 +87,9 @@
 		D2CD122322423BBF00681C5F /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 		D2CD122422423BBF00681C5F /* OperationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationType.swift; sourceTree = "<group>"; };
 		D2CD122522423BBF00681C5F /* Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
-		D2CD122622423BBF00681C5F /* Operation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
+		D2CD122622423BBF00681C5F /* Operation.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; tabWidth = 2; };
 		D2CD122722423BBF00681C5F /* OperationSetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationSetType.swift; sourceTree = "<group>"; };
+		D2CD123222423E8B00681C5F /* Renderer.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; tabWidth = 2; };
 		D500FD111C3AABED00782D78 /* Playground-iOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-iOS.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D500FD121C3AAC8E00782D78 /* Playground-macOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-macOS.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D5B2E89F1C3A780C00C0327D /* RoughSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RoughSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -260,6 +262,7 @@
 		D5C6296A1C3A809D007F7B7C /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				D2CD123222423E8B00681C5F /* Renderer.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -610,6 +613,7 @@
 				D2CD122C22423BBF00681C5F /* OperationSet.swift in Sources */,
 				D2CD123122423BBF00681C5F /* OperationSetType.swift in Sources */,
 				D2CD122822423BBF00681C5F /* Options.swift in Sources */,
+				D2CD123322423E8B00681C5F /* Renderer.swift in Sources */,
 				D2CD122D22423BBF00681C5F /* Point.swift in Sources */,
 				D2CD122B22423BBF00681C5F /* Generator.swift in Sources */,
 				D2CD123022423BBF00681C5F /* Operation.swift in Sources */,

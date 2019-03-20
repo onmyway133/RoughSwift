@@ -35,53 +35,39 @@ public class Operation {
 }
 
 public class Move: Operation {
-  public let a: Float
-  public let b: Float
+  public let point: Point
   
   init(data: [Float]) {
-    self.a = data[0]
-    self.b = data[1]
+    self.point = Point(x: data[0], y: data[1])
   }
 }
 
 public class LineTo: Operation {
-  public let a: Float
-  public let b: Float
+  public let point: Point
   
   init(data: [Float]) {
-    self.a = data[0]
-    self.b = data[1]
+    self.point = Point(x: data[0], y: data[1])
   }
 }
 
 public class BezierCurveTo: Operation {
-  public let a: Float
-  public let b: Float
-  public let c: Float
-  public let d: Float
-  public let e: Float
-  public let f: Float
+  public let point: Point
+  public let controlPoint1: Point
+  public let controlPoint2: Point
   
   init(data: [Float]) {
-    self.a = data[0]
-    self.b = data[1]
-    self.c = data[2]
-    self.d = data[3]
-    self.e = data[4]
-    self.f = data[5]
+    self.point = Point(x: data[0], y: data[1])
+    self.controlPoint1 = Point(x: data[2], y: data[3])
+    self.controlPoint2 = Point(x: data[4], y: data[5])
   }
 }
 
 public class QuadraticCurveTo: Operation {
-  public let a: Float
-  public let b: Float
-  public let c: Float
-  public let d: Float
+  public let point: Point
+  public let controlPoint: Point
   
   init(data: [Float]) {
-    self.a = data[0]
-    self.b = data[1]
-    self.c = data[2]
-    self.d = data[3]
+    self.point = Point(x: data[0], y: data[1])
+    self.controlPoint = Point(x: data[2], y: data[3])
   }
 }
