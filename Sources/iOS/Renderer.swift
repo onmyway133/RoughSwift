@@ -42,7 +42,7 @@ public class Renderer {
       layer.strokeColor = UIColor(hex: options.stroke.toHex()).cgColor
     case .fillPath:
       layer.fillColor = options.fill.cgColor
-    default:
+    case .path2DFill, .path2DPattern:
       break
     }
     
