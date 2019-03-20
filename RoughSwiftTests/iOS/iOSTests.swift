@@ -66,8 +66,8 @@ class iOSTests: XCTestCase {
     options.stroke = "green"
     generator.rectangle(x: 10, y: 10, width: 50, height: 50, options: options)
     
-    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.9, execute: {
-      let abc = view
+    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5, execute: {
+      let _ = view
       expectation.fulfill()
     })
 

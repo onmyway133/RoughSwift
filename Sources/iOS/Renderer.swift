@@ -18,6 +18,7 @@ public class Renderer {
   public func handle(drawable: Drawable) {
     drawable.sets.forEach { set in
       let shapeLayer = self.shapeLayer(set: set, options: drawable.options)
+      shapeLayer.frame = layer.bounds
       layer.addSublayer(shapeLayer)
     }
   }
@@ -26,13 +27,27 @@ public class Renderer {
     let layer = CAShapeLayer()
     let path = UIBezierPath()
     
-    path.lineWidth = CGFloat(options.strokeWidth)
-    layer.strokeColor = UIColor(hex: options.stroke).cgColor
-
+    switch set.type {
+    case .path:
+      path.lineWidth = CGFloat(options.strokeWidth)
+      layer.strokeColor = UIColor(hex: options.stroke).cgColor
+    case .fillSketch:
+      var fweight = options.fillWeight
+      if (fweight < 0) {
+        fweight = options.strokeWidth / 2
+      }
+      
+      path.lineWidth = CGFloat(fweight)
+      layer.strokeColor = UIColor(hex: options.stroke).cgColor
+    default:
+      break
+    }
+    
     set.operations.forEach { op in
       operate(op: op, path: path)
     }
     
+    layer.path = path.cgPath
     return layer
   }
   
