@@ -17,6 +17,15 @@ public class Generator {
   public init(generator: JSValue) {
     self.generator = generator
   }
+    
+  public func line(from: Point, to: Point, options: Options = Options()) {
+    let drawable = generator.invokeMethod(
+      "line",
+      withArguments: [from.x, from.y, to.x, to.y, options.toRoughDictionary()]
+    )
+    
+    handle(roughDrawable: drawable)
+  }
   
   public func rectangle(x: Float, y: Float, width: Float, height: Float, options: Options = Options()) {
     let drawable = generator.invokeMethod(

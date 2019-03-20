@@ -33,7 +33,7 @@ class iOSTests: XCTestCase {
       XCTAssertEqual(drawable.sets.count, 2)
       
       let set = drawable.sets[0]
-      XCTAssertEqual(set.operations.count, 68)
+      XCTAssertTrue(set.operations.count == 68 || set.operations.count == 76)
       
       XCTAssertEqual(drawable.options.fillStyle, .zigzag)
       XCTAssertEqual(drawable.options.hachureAngle, 60)
@@ -74,12 +74,12 @@ class iOSTests: XCTestCase {
     wait(for: [expectation], timeout: 1)
   }
   
-  func testDrawCircle() {
+  func testDrawLines() {
     let size = CGSize(width: 300, height: 300)
     let layer = draw(size: size, draw: { generator in
-      var options = Options()
-      options.fill = UIColor.red
-      generator.circle(x: 50, y: 50, diameter: 80, options: options)
+      generator.circle(x: 80, y: 120, diameter: 50)
+      generator.ellipse(x: 300, y: 100, width: 150, height: 80)
+      generator.line(from: Point(x: 80, y: 120), to: Point(x: 300, y: 100))
     })
     
     XCTAssertEqual(layer.frame.size, size)

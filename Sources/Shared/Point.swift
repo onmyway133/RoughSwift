@@ -11,8 +11,13 @@ import Foundation
 public struct Point {
   let x: Float
   let y: Float
+    
+  public init(x: Float, y: Float) {
+    self.x = x
+    self.y = y
+  }
   
-  func toRoughPoint() -> [Float] {
+  public func toRoughPoint() -> [Float] {
     return [x, y]
   }
 }
