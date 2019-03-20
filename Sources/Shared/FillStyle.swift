@@ -14,7 +14,8 @@ public enum FillStyle: String {
   case zigzag
   case crossHatch = "cross-hatch"
   case dots
-  case sunburst
+  case sunBurst = "sunburst"
+  case starBurst = "starburst"
   case dashed
   case zigzagLine = "zigzag-line"
 }

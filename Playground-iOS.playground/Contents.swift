@@ -17,10 +17,12 @@ let layer = draw(size: size, using: { generator in
   options.fillStyle = .sunburst
   options.hachureAngle = 120
   options.hachureGap = 4
+  options.fill = UIColor.blue
   generator.rectangle(x: 10, y: 10, width: 100, height: 50, options: options)
     
   options.fill = UIColor.green
   options.fillStyle = .crossHatch
+  options.stroke = UIColor.brown
   generator.ellipse(x: 80, y: 100, width: 100, height: 50, options: options)
 })
 
