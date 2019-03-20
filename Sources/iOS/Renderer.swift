@@ -18,14 +18,12 @@ public class Renderer {
   public func handle(drawable: Drawable) {
     drawable.sets.forEach { set in
       set.operations.forEach { op in
-        let shapeLayer = handle(op: op)
-        layer.addSublayer(shapeLayer)
+        let path = handle(op: op)
       }
     }
   }
   
-  private func handle(op: Operation) -> CAShapeLayer {
-    let shapeLayer = CAShapeLayer()
+  private func handle(op: Operation) -> UIBezierPath {
     let path = UIBezierPath()
     
     switch op {
@@ -48,8 +46,7 @@ public class Renderer {
       break
     }
     
-    shapeLayer.path = path.cgPath
-    return shapeLayer
+    return path
   }
 }
 

@@ -66,6 +66,7 @@ class iOSTests: XCTestCase {
     
     var options = Options()
     options.fill = "rgb(10,150,10)"
+    options.stroke = "green"
     generator.rectangle(x: 10, y: 10, width: 50, height: 50, options: options)
     
     wait(for: [expectation], timeout: 1)
