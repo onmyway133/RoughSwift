@@ -95,4 +95,17 @@ class iOSTests: XCTestCase {
     
     XCTAssertEqual(layer.frame.size, size)
   }
+  
+  func testDrawFillingSolid() {
+    let size = CGSize(width: 300, height: 300)
+    let layer = draw(size: size, using: { generator in
+      var options = Options()
+      options.fill = UIColor.red
+      options.fillStyle = .solid
+      
+      generator.rectangle(x: 120, y: 105, width: 80, height: 80, options: options)
+    })
+    
+    XCTAssertEqual(layer.frame.size, size)
+  }
 }
