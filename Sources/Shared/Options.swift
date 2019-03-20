@@ -42,7 +42,7 @@ public struct Options {
   
   public init() {}
   
-  func toRoughDictionary() -> [String: Any] {
+  func toRoughDictionary() -> JSONDictionary {
     return [
       "maxRandomnessOffset": maxRandomnessOffset,
       "roughness": roughness,
@@ -59,5 +59,11 @@ public struct Options {
       "dashGap": dashGap,
       "zigzagOffset": zigzagOffset
     ]
+  }
+  
+  static func from(dictionary: JSONDictionary) -> Options {
+    var options = Options()
+    options.maxRandomnessOffset <-? (dictionary["maxRandomnessOffset"] as? NSNumber)?.floatValue
+    return options
   }
 }
