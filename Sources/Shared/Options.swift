@@ -6,7 +6,7 @@
 //  Copyright © 2019 Khoa Pham. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public enum FillStyle: String {
   case hachure
@@ -23,12 +23,8 @@ public struct Options {
   public var maxRandomnessOffset: Float = 2
   public var roughness: Float = 1
   public var bowing: Float = 1
-    
-  /// In hex, 'none' for transparent
-  public var fill: String = "none"
-  
-  /// In hex, 'none' for transparent
-  public var stroke: String = "#000"
+  public var fill: UIColor = .clear
+  public var stroke: UIColor = .black
   public var strokeWidth: Float = 1
   public var curveTightness: Float = 0
   public var curveStepCount: Float = 9
@@ -67,8 +63,6 @@ public struct Options {
     options.maxRandomnessOffset <-? (dictionary["maxRandomnessOffset"] as? NSNumber)?.floatValue
     options.roughness <-? (dictionary["roughness"] as? NSNumber)?.floatValue
     options.bowing <-? (dictionary["bowing"] as? NSNumber)?.floatValue
-    options.stroke <-? (dictionary["maxRandomnessOffset"] as? String)
-    options.fill <-? (dictionary["fill"] as? String)
     options.strokeWidth <-? (dictionary["strokeWidth"] as? NSNumber)?.floatValue
     options.curveTightness <-? (dictionary["curveTightness"] as? NSNumber)?.floatValue
     options.curveStepCount <-? (dictionary["curveStepCount"] as? NSNumber)?.floatValue
@@ -83,6 +77,9 @@ public struct Options {
       let fillStyle = FillStyle(rawValue: fillStyleRawValue) {
       options.fillStyle = fillStyle
     }
+    
+    options.stroke <-? (dictionary["stroke"] as? String).map(UIColor.init(hex:))
+    options.fill <-? (dictionary["fill"] as? String).map(UIColor.init(hex:))
     
     return options
   }

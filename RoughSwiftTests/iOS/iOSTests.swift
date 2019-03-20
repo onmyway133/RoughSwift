@@ -73,4 +73,12 @@ class iOSTests: XCTestCase {
 
     wait(for: [expectation], timeout: 1)
   }
+  
+  func testDrawCircle() {
+    let layer = draw(size: CGSize(width: 300, height: 300), draw: { generator in
+      var options = Options()
+      options.fill = 'red'
+      rc.circle(50, 50, 80, { fill: 'red' }); // fill with red hachure
+    })
+  }
 }

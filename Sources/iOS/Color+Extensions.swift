@@ -13,11 +13,6 @@ extension UIColor {
   ///
   /// - Parameter hex: A hex string, can either contain # or not
   convenience init(hex string: String) {
-    if (string == "none") {
-      self.init(cgColor: UIColor.clear.cgColor)
-      return
-    }
-    
     var hex = string.hasPrefix("#")
       ? String(string.dropFirst())
       : string
@@ -41,5 +36,20 @@ extension UIColor {
       red:   CGFloat((intCode >> 16) & 0xFF) / 255.0,
       green: CGFloat((intCode >> 8) & 0xFF) / 255.0,
       blue:  CGFloat((intCode) & 0xFF) / 255.0, alpha: 1.0)
+  }
+  
+  func toHex() -> String {
+    let colorRef = cgColor.components!
+    
+    let r:CGFloat = colorRef[0]
+    let g:CGFloat = colorRef[1]
+    let b:CGFloat = colorRef[2]
+    
+    return String(
+      format: "#%02lX%02lX%02lX",
+      lroundf(Float(r * 255)),
+      lroundf(Float(g * 255)),
+      lroundf(Float(b * 255))
+    )
   }
 }
