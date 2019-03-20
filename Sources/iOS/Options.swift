@@ -23,6 +23,7 @@ public struct Options {
   public var maxRandomnessOffset: Float = 2
   public var roughness: Float = 1
   public var bowing: Float = 1
+  public var fill: String = "none"
   public var stroke: String = "#000"
   public var strokeWidth: Float = 1
   public var curveTightness: Float = 0
