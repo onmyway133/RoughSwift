@@ -10,9 +10,9 @@ view.backgroundColor = .white
 
 let layer = draw(size: size, using: { generator in
   var options = Options()
-  options.fill = UIColor.red
+  options.fill = UIColor.brown
   options.fillStyle = .zigzag
-  generator.circle(x: 200, y: 200, diameter: 80, options: options)
+  generator.circle(x: 200, y: 200, diameter: 120, options: options)
     
   options.fill = UIColor.purple
   options.fillStyle = .hachure
