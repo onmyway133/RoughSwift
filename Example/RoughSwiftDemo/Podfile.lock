@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../../"
 
 SPEC CHECKSUMS:
-  RoughSwift: 0bf51ffae0b1dc0eccd19f4b0b3890ac3903f409
+  RoughSwift: c5ba64195105b5a00c4331bd2feceba744eed5df
 
 PODFILE CHECKSUM: 8839ca6640bb0e3f707084c2b5dc4555bc78ed1a
 

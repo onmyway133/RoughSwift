@@ -18,13 +18,13 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
   s.ios.source_files = 'Sources/{Shared,iOS}/**/*'
-  s.resources  = 'Sources/Shared/*.js}'
+  s.resources  = 'Sources/Shared/*.js'
 
   # s.tvos.source_files = 'Sources/{iOS,tvOS,Shared}/**/*'
   # s.osx.source_files = 'Sources/{macOS,Shared}/**/*'
   # s.watchos.source_files = 'Sources/{watchOS,Shared}/**/*'
 
-  # s.ios.frameworks = 'UIKit', 'Foundation'
+  s.ios.frameworks = 'UIKit', 'JavascriptCore'
   # s.osx.frameworks = 'Cocoa', 'Foundation'
   # s.dependency 'Whisper', '~> 1.0'
   # s.watchos.exclude_files = ["Sources/AnimatedImageView.swift"] 
