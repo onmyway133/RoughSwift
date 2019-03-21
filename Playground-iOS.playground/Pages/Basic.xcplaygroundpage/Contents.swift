@@ -41,6 +41,16 @@ func polygon(generator: Generator) {
   generator.polygon(points: points, options: options)
 }
 
+func chart(generator: Generator) {
+  let width: Float = 50
+  var options = Options()
+  options.fill = UIColor.yellow
+  Array(0..<10).forEach { i in
+    let height = Float(arc4random_uniform(100))
+    generator.rectangle(x: Float(i) * width + 100, y: 450 - height, width: width, height: height, options: options)
+  }
+}
+
 let layer = draw(size: size, using: { generator in
   var options = Options()
   options.fill = UIColor.green
@@ -61,6 +71,7 @@ let layer = draw(size: size, using: { generator in
 
   sineWave(generator: generator)
   polygon(generator: generator)
+  chart(generator: generator)
 })
 
 let bird = draw(size: CGSize(width: 150, height: 150), using: { generator in
