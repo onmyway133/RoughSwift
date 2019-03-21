@@ -46,8 +46,8 @@ func chart(generator: Generator) {
   var options = Options()
   options.fill = UIColor.yellow
   Array(0..<10).forEach { i in
-    let height = Float(arc4random_uniform(100))
-    generator.rectangle(x: Float(i) * width + 100, y: 450 - height, width: width, height: height, options: options)
+    let height = Float(arc4random_uniform(150))
+    generator.rectangle(x: Float(i) * width + 100, y: 470 - height, width: width, height: height, options: options)
   }
 }
 
