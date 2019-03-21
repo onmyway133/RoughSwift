@@ -74,6 +74,15 @@ class iOSTests: XCTestCase {
     wait(for: [expectation], timeout: 1)
   }
   
+  func testRectangle() {
+    let size = CGSize(width: 300, height: 300)
+    let layer = draw(size: size, using: { generator in
+      generator.rectangle(x: 10, y: 20, width: 100, height: 200)
+    })
+    
+    XCTAssertEqual(layer.frame.size, size)
+  }
+  
   func testDrawLines() {
     let size = CGSize(width: 300, height: 300)
     let layer = draw(size: size, using: { generator in
