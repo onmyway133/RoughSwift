@@ -28,6 +28,7 @@ let layer = draw(size: size, using: { generator in
   generator.ellipse(x: 80, y: 170, width: 100, height: 50, options: options)
   
   options.stroke = UIColor.yellow
+  options.fill = UIColor.purple
   generator.path(d: "M80 80 A 45 45, 0, 0, 0, 125 125 L 125 80 Z")
 })
 
