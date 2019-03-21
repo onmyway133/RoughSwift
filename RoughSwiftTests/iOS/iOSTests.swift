@@ -175,4 +175,25 @@ class iOSTests: XCTestCase {
     generator.path(d: "M80 80 A 45 45, 0, 0, 0, 125 125 L 125 80 Z")
     wait(for: [expectation], timeout: 1)
   }
+  
+  func testPolygon() {
+    let size = CGSize(width: 500, height: 500)
+    let layer = draw(size: size, using: { generator in
+      let points = [
+        Point(x: 200, y: 370),
+        Point(x: 300, y: 385),
+        Point(x: 400, y: 480),
+        Point(x: 350, y: 460)
+      ]
+      
+      var options = Options()
+      options.stroke = UIColor.red
+      options.fill = UIColor.green
+      options.hachureAngle = 65
+      
+      generator.polygon(points: points, options: options)
+    })
+    
+    XCTAssertEqual(layer.frame.size, size)
+  }
 }
