@@ -56,9 +56,10 @@ public class BezierCurveTo: Operation {
   public let controlPoint2: Point
   
   init(data: [Float]) {
-    self.point = Point(x: data[0], y: data[1])
-    self.controlPoint1 = Point(x: data[2], y: data[3])
-    self.controlPoint2 = Point(x: data[4], y: data[5])
+    // void ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y);
+    self.controlPoint1 = Point(x: data[0], y: data[1])
+    self.controlPoint2 = Point(x: data[2], y: data[3])
+    self.point = Point(x: data[4], y: data[5])
   }
 }
 
@@ -67,7 +68,8 @@ public class QuadraticCurveTo: Operation {
   public let controlPoint: Point
   
   init(data: [Float]) {
-    self.point = Point(x: data[0], y: data[1])
-    self.controlPoint = Point(x: data[2], y: data[3])
+    // void ctx.quadraticCurveTo(cpx, cpy, x, y);
+    self.controlPoint = Point(x: data[0], y: data[1])
+    self.point = Point(x: data[2], y: data[3])
   }
 }
