@@ -95,7 +95,7 @@ public class Renderer {
     }
   }
   
-  /// Apply mask to path2DFill or path2DPattern
+  /// Apply mask for path2DFill or path2DPattern
   private func handlePath2DIfAny(pairs: [(OperationSet, CAShapeLayer)], options: Options) {
     guard let pair = pairs.first(where: { $0.0.path != nil }) else {
       return
