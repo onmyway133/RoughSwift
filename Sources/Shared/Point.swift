@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Point {
+public struct Point: Equatable {
   let x: Float
   let y: Float
     

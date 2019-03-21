@@ -142,4 +142,23 @@ class iOSTests: XCTestCase {
     
     XCTAssertEqual(layer.frame.size, size)
   }
+  
+  func testPathDrawble() {
+    let expectation = self.expectation(description: "")
+    
+    let engine = Engine()
+    let generator = engine.generator(size: CGSize(width: 300, height: 300))
+    
+    generator.onDrawable = { drawable in
+      XCTAssertEqual(drawable.sets[0].path, "M80 80 A 45 45, 0, 0, 0, 125 125 L 125 80 Z")
+      XCTAssertEqual(drawable.sets[0].size, Size(width: 100, height: 100))
+      
+      expectation.fulfill()
+    }
+    
+    var options = Options()
+    options.fill = UIColor.green
+    generator.path(d: "M80 80 A 45 45, 0, 0, 0, 125 125 L 125 80 Z")
+    wait(for: [expectation], timeout: 1)
+  }
 }
