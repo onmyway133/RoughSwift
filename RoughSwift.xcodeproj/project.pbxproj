@@ -93,7 +93,7 @@
 		D2CD122422423BBF00681C5F /* OperationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = OperationType.swift; sourceTree = "<group>"; tabWidth = 2; };
 		D2CD122522423BBF00681C5F /* Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; tabWidth = 2; };
 		D2CD122622423BBF00681C5F /* Operation.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; tabWidth = 2; };
-		D2CD122722423BBF00681C5F /* OperationSetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationSetType.swift; sourceTree = "<group>"; };
+		D2CD122722423BBF00681C5F /* OperationSetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = OperationSetType.swift; sourceTree = "<group>"; tabWidth = 2; };
 		D2CD123222423E8B00681C5F /* Renderer.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; tabWidth = 2; };
 		D2CD12342242494E00681C5F /* Color+Extensions.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; tabWidth = 2; };
 		D2CD123622424B7D00681C5F /* Operator.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Operator.swift; sourceTree = "<group>"; tabWidth = 2; };
