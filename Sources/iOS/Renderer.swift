@@ -113,7 +113,7 @@ public class Renderer {
     maskLayer.path = UIBezierPath(svgPath: pair.0.path!).cgPath
     fillLayer.mask = maskLayer
     
-    // pathRect is $0.0.size, smaller than fillLayer
+    // pathRect is smaller than fillLayer
     let pathRect = path.boundingBox
     
     // Avoid division by 0
