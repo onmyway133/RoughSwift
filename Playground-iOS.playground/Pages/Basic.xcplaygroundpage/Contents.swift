@@ -27,10 +27,10 @@ func sineWave(generator: Generator) {
 
 func polygon(generator: Generator) {
   let points = [
-    Point(x: 200, y: 370),
-    Point(x: 300, y: 385),
-    Point(x: 400, y: 480),
-    Point(x: 350, y: 460)
+    Point(x: 5, y: 5),
+    Point(x: 100, y: 50),
+    Point(x: 50, y: 100),
+    Point(x: 10, y: 90)
   ]
 
   var options = Options()

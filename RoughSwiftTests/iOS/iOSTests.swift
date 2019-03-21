@@ -180,10 +180,10 @@ class iOSTests: XCTestCase {
     let size = CGSize(width: 500, height: 500)
     let layer = draw(size: size, using: { generator in
       let points = [
-        Point(x: 200, y: 370),
-        Point(x: 300, y: 385),
-        Point(x: 400, y: 480),
-        Point(x: 350, y: 460)
+        Point(x: 10, y: 10),
+        Point(x: 70, y: 30),
+        Point(x: 150, y: 100),
+        Point(x: 30, y: 140)
       ]
       
       var options = Options()
