@@ -137,7 +137,7 @@ class iOSTests: XCTestCase {
     let layer = draw(size: size, using: { generator in
       var options = Options()
       options.fill = UIColor.green
-      generator.path(d: "M80 80 A 45 45, 0, 0, 0, 125 125 L 125 80 Z")
+      generator.path(d: "M80 80 A 45 45, 0, 0, 0, 125 125 L 125 80 Z", options: options)
     })
     
     XCTAssertEqual(layer.frame.size, size)
