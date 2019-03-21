@@ -28,7 +28,7 @@ let layer = draw(size: size, using: { generator in
   generator.ellipse(x: 80, y: 170, width: 100, height: 50, options: options)
 })
 
-let apple = draw(size: CGSize(width: 150, height: 150), using: { generator in
+let bird = draw(size: CGSize(width: 150, height: 150), using: { generator in
   var options = Options()
   options.stroke = UIColor.brown
   options.fill = UIColor.red
@@ -37,5 +37,5 @@ let apple = draw(size: CGSize(width: 150, height: 150), using: { generator in
 })
 
 view.layer.addSublayer(layer)
-view.layer.addSublayer(apple)
+view.layer.addSublayer(bird)
 PlaygroundPage.current.liveView = view
