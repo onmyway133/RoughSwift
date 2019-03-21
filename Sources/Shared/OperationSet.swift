@@ -14,7 +14,7 @@ public struct OperationSet {
     
   // For path
   public let path: String?
-  private let size: Size?
+  public let size: Size?
   
   static func from(dictionary: JSONDictionary) -> OperationSet? {
     guard
