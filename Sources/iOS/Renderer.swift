@@ -16,11 +16,17 @@ public class Renderer {
   }
   
   public func handle(drawable: Drawable) {
-    drawable.sets.forEach { set in
-      let shapeLayer = self.shapeLayer(set: set, options: drawable.options)
-      shapeLayer.frame = layer.bounds
+    let pairs = drawable.sets.map({
+      return ($0, self.shapeLayer(set: $0, options: drawable.options))
+    })
+    
+    pairs.forEach { pair in
+      let shapeLayer = pair.1
       layer.addSublayer(shapeLayer)
+      shapeLayer.frame = layer.bounds
     }
+    
+    handlePath2DIfAny(pairs: pairs)
   }
   
   private func shapeLayer(set: OperationSet, options: Options) -> CAShapeLayer {
@@ -87,6 +93,18 @@ public class Renderer {
     default:
       break
     }
+  }
+  
+  /// Apply mask to path2DFill or path2DPattern
+  private func handlePath2DIfAny(pairs: [(OperationSet, CAShapeLayer)]) {
+    guard let pair = pairs.first(where: { $0.0.path != nil }) else {
+      return
+    }
+    
+    let maskLayer = CAShapeLayer()
+    maskLayer.path = UIBezierPath(svgPath: pair.0.path!).cgPath
+    
+    pair.1.mask = maskLayer
   }
 }
 
