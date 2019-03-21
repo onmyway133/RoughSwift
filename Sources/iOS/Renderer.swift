@@ -101,10 +101,27 @@ public class Renderer {
       return
     }
     
+    let fillLayer = pair.1
+    
+    guard let path = fillLayer.path else {
+      return
+    }
+    
+    // Apply mask
     let maskLayer = CAShapeLayer()
     maskLayer.path = UIBezierPath(svgPath: pair.0.path!).cgPath
+    fillLayer.mask = maskLayer
     
-    pair.1.mask = maskLayer
+    // pathRect is $0.0.size, smaller than fillLayer
+    let pathRect = path.boundingBox
+    
+    // Avoid division by 0
+    let scaleX = fillLayer.frame.size.width / max(pathRect.width, 1)
+    let scaleY = fillLayer.frame.size.height / max(pathRect.height, 1)
+    
+    let scaledPath = UIBezierPath(cgPath: path)
+    scaledPath.apply(CGAffineTransform(scaleX: scaleX, y: scaleY))
+    fillLayer.path = scaledPath.cgPath
   }
 }
 
