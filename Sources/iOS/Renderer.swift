@@ -9,7 +9,7 @@
 import UIKit
 
 public class Renderer {
-  private let layer: CALayer
+  public let layer: CALayer
   
   public init(layer: CALayer) {
     self.layer = layer
