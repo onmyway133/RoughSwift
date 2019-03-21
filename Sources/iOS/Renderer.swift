@@ -104,30 +104,35 @@ public class Renderer {
     let set = pair.0
     let fillLayer = pair.1
     
-    guard let path = fillLayer.path else {
-      return
-    }
-    
     // Apply mask
     let maskLayer = CAShapeLayer()
     maskLayer.path = UIBezierPath(svgPath: pair.0.path!).cgPath
+    scalePathToFrame(shapeLayer: maskLayer)
     fillLayer.mask = maskLayer
-    
-    // pathRect is smaller than fillLayer
-    let pathRect = path.boundingBox
-    
-    // Avoid division by 0
-    let scaleX = fillLayer.frame.size.width / max(pathRect.width, 1)
-    let scaleY = fillLayer.frame.size.height / max(pathRect.height, 1)
-    
-    let scaledPath = UIBezierPath(cgPath: path)
-    scaledPath.apply(CGAffineTransform(scaleX: scaleX, y: scaleY))
-    fillLayer.path = scaledPath.cgPath
-    
+  
     // Somehow fillLayer loses backgroundColor, set fillColor again
     if (set.type == .path2DFill) {
       fillLayer.backgroundColor = options.fill.cgColor
     }
+    
+    pairs.forEach {
+      scalePathToFrame(shapeLayer: $0.1)
+    }
+  }
+  
+  /// For svg path, make all path within frame
+  private func scalePathToFrame(shapeLayer: CAShapeLayer) {
+    guard let path = shapeLayer.path else {
+      return
+    }
+
+    // Avoid division by 0
+    let scaleX = path.boundingBox.size.width / max(layer.frame.size.width, 1)
+    let scaleY = path.boundingBox.size.height / max(layer.frame.size.height, 1)
+    
+    let scaledPath = UIBezierPath(cgPath: path)
+    scaledPath.apply(CGAffineTransform(scaleX: 1/scaleX, y: 1/scaleY))
+    shapeLayer.path = scaledPath.cgPath
   }
 }
 
