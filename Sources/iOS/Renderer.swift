@@ -26,7 +26,7 @@ public class Renderer {
       shapeLayer.frame = layer.bounds
     }
     
-    handlePath2DIfAny(pairs: pairs)
+    handlePath2DIfAny(pairs: pairs, options: drawable.options)
   }
   
   private func shapeLayer(set: OperationSet, options: Options) -> CAShapeLayer {
@@ -96,11 +96,12 @@ public class Renderer {
   }
   
   /// Apply mask to path2DFill or path2DPattern
-  private func handlePath2DIfAny(pairs: [(OperationSet, CAShapeLayer)]) {
+  private func handlePath2DIfAny(pairs: [(OperationSet, CAShapeLayer)], options: Options) {
     guard let pair = pairs.first(where: { $0.0.path != nil }) else {
       return
     }
     
+    let set = pair.0
     let fillLayer = pair.1
     
     guard let path = fillLayer.path else {
@@ -122,6 +123,11 @@ public class Renderer {
     let scaledPath = UIBezierPath(cgPath: path)
     scaledPath.apply(CGAffineTransform(scaleX: scaleX, y: scaleY))
     fillLayer.path = scaledPath.cgPath
+    
+    // Because we change the path, set fillColor again
+    if (set.type == .path2DFill) {
+      fillLayer.backgroundColor = options.fill.cgColor
+    }
   }
 }
 
