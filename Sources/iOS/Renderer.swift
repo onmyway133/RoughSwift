@@ -33,16 +33,13 @@ public class Renderer {
       path.lineWidth = CGFloat(options.strokeWidth)
       layer.strokeColor = options.stroke.cgColor
     case .fillSketch:
-      var fweight = options.fillWeight
-      if (fweight < 0) {
-        fweight = options.strokeWidth / 2
-      }
-      
-      path.lineWidth = CGFloat(fweight)
-      layer.strokeColor = options.fill.cgColor
+      fillSketch(path: path, layer: layer, options: options)
     case .fillPath:
-      layer.fillColor = options.fill.cgColor
-    case .path2DFill, .path2DPattern:
+      fillPath(layer: layer, options: options)
+    case .path2DFill:
+      fillPath(layer: layer, options: options)
+    case .path2DPattern:
+      fillSketch(path: path, layer: layer, options: options)
       break
     }
     
@@ -52,6 +49,22 @@ public class Renderer {
     
     layer.path = path.cgPath
     return layer
+  }
+  
+  /// Sketch style fill, using many stroke paths
+  private func fillSketch(path: UIBezierPath, layer: CAShapeLayer, options: Options) {
+    var fweight = options.fillWeight
+    if (fweight < 0) {
+      fweight = options.strokeWidth / 2
+    }
+    
+    path.lineWidth = CGFloat(fweight)
+    layer.strokeColor = options.fill.cgColor
+  }
+  
+  /// Solid fill, using fill layer
+  private func fillPath(layer: CAShapeLayer, options: Options) {
+    layer.fillColor = options.fill.cgColor
   }
   
   private func operate(op: Operation, path: UIBezierPath) {
