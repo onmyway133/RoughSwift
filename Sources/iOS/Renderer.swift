@@ -124,7 +124,7 @@ public class Renderer {
     scaledPath.apply(CGAffineTransform(scaleX: scaleX, y: scaleY))
     fillLayer.path = scaledPath.cgPath
     
-    // Because we change the path, set fillColor again
+    // Somehow fillLayer loses backgroundColor, set fillColor again
     if (set.type == .path2DFill) {
       fillLayer.backgroundColor = options.fill.cgColor
     }
