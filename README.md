@@ -6,7 +6,6 @@
 [![Platform](https://img.shields.io/cocoapods/p/RoughSwift.svg?style=flat)](http://cocoadocs.org/docsets/RoughSwift)
 ![Swift](https://img.shields.io/badge/%20in-swift%204.2-orange.svg)
 
-
 ![](Screenshots/s1.png)
 
 ## Description
@@ -24,6 +23,8 @@ RoughSwift allows us to easily make shapes in hand drawn, sketchy, comic style. 
 - [x] Test coverage
 - [x] Immutable and type safe data structure
 - [ ] SVG elliptical arc
+
+There are [Playground](https://github.com/onmyway133/RoughSwift/tree/master/Playground-iOS.playground) and [Example](https://github.com/onmyway133/RoughSwift/tree/master/Example/RoughSwiftDemo) project where you can explore further.
 
 ## Basic
 
