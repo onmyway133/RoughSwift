@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Information from Generator about the drawble to render
 public struct Drawable {
   public let shape: String
   public let sets: [OperationSet]

@@ -8,7 +8,9 @@
 
 import UIKit
 
+/// Convert Drawable to UIBezierPath and add to CAShapeLayer
 public class Renderer {
+  /// The layer that many shape layers will be rendered onto
   public let layer: CALayer
   
   public init(layer: CALayer) {

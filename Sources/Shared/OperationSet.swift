@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Instructions about which set type to draw and operations
 public struct OperationSet {
   public let type: OperationSetType
   public let operations: [Operation]

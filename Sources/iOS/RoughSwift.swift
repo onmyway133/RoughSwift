@@ -8,7 +8,8 @@
 
 import UIKit
 
-/// Setup the whole stack, you just need to specify shapes to draw
+/// Conveniently to draw and get rendered layer
+/// This sets up the whole stack, you just need to specify shapes to draw
 public func draw(size: CGSize, using: (Generator) -> Void) -> CALayer {
   let layer = CALayer()
   layer.frame.size = size

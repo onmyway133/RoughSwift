@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Detailed instruction to convert to bezier path
 public class Operation {
   static func from(dictionary: JSONDictionary) -> Operation? {
     guard
