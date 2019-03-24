@@ -146,7 +146,7 @@ bird.frame.origin = CGPoint(x: 100, y: 100)
 
 ## Creative shapes
 
-With all the primitive shapes, we can create more beautiful things. The only limit is your imaginary. 
+With all the primitive shapes, we can create more beautiful things. The only limit is your imagination.
 
 Here's how to create chart
 
