@@ -154,11 +154,11 @@ Here's how to create chart
 
 ```swift
 let width: Float = 50
-  var options = Options()
-  options.fill = UIColor.yellow
-  Array(0..<10).forEach { i in
-    let height = Float(arc4random_uniform(150))
-    generator.rectangle(x: Float(i) * width + 100, y: 470 - height, width: width, height: height, options: options)
+var options = Options()
+options.fill = UIColor.yellow
+Array(0..<10).forEach { i in
+  let height = Float(arc4random_uniform(150))
+  generator.rectangle(x: Float(i) * width + 100, y: 470 - height, width: width, height: height, options: options)
 }
 ```
 
