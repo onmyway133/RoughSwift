@@ -3,5 +3,6 @@
     <pages>
         <page name='Basic'/>
         <page name='Try'/>
+        <page name='Shape'/>
     </pages>
 </playground>
