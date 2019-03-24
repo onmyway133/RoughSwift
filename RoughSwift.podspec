@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = "RoughSwift"
-  s.summary          = "Create graphics with a hand-drawn, sketchy, appearance"
-  s.version          = "0.1.0"
+  s.summary          = "Create hand-drawn, sketchy, comic shape in Swift"
+  s.version          = "1.0.0"
   s.homepage         = "https://github.com/onmyway133/RoughSwift"
   s.license          = 'MIT'
   s.author           = { "Khoa Pham" => "onmyway133@gmail.com" }
@@ -26,7 +26,6 @@ Pod::Spec.new do |s|
 
   s.ios.frameworks = 'UIKit', 'JavascriptCore'
   # s.osx.frameworks = 'Cocoa', 'Foundation'
-  # s.dependency 'Whisper', '~> 1.0'
   # s.watchos.exclude_files = ["Sources/AnimatedImageView.swift"] 
 
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.2' }
