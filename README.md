@@ -5,7 +5,10 @@
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/RoughSwift.svg?style=flat)](http://cocoadocs.org/docsets/RoughSwift)
 [![Platform](https://img.shields.io/cocoapods/p/RoughSwift.svg?style=flat)](http://cocoadocs.org/docsets/RoughSwift)
-![Swift](https://img.shields.io/badge/%20in-swift%204.0-orange.svg)
+![Swift](https://img.shields.io/badge/%20in-swift%204.2-orange.svg)
+
+![](Screenshots/s.png)
+![](Screenshots/s1.png)
 
 ## Description
 
