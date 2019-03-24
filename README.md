@@ -1,23 +1,152 @@
-# RoughSwift
+![](Screenshots/s.png)
 
-[![CI Status](https://img.shields.io/circleci/project/github/onmyway133/RoughSwift.svg)](https://circleci.com/gh/onmyway133/RoughSwift)
 [![Version](https://img.shields.io/cocoapods/v/RoughSwift.svg?style=flat)](http://cocoadocs.org/docsets/RoughSwift)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/RoughSwift.svg?style=flat)](http://cocoadocs.org/docsets/RoughSwift)
 [![Platform](https://img.shields.io/cocoapods/p/RoughSwift.svg?style=flat)](http://cocoadocs.org/docsets/RoughSwift)
 ![Swift](https://img.shields.io/badge/%20in-swift%204.2-orange.svg)
 
-![](Screenshots/s.png)
+
 ![](Screenshots/s1.png)
 
 ## Description
 
-**RoughSwift** description.
+RoughSwift allows us to easily make shapes in hand drawn, sketchy, comic style. Based on the same concept of [Snowflake](https://github.com/onmyway133/Snowflake) which generates `CALayer` that are highly composable and changeable, RoughSwift turns drawing commands into beautiful sketchy graphics.
 
-## Usage
+- [x] Support iOS, tvOS
+- [ ] Support macOS
+- [x] Support all shapes: line, rectangle, circle, ellipse, linear path, arc, curve, polygon, svg path
+- [x] Generate `UIBezierPath` for `CAShapeLayer`
+- [x] Easy cusomizations with Options
+- [x] Easy composable APIs
+- [x] Convenient draw functions
+- [x] Platform independant APIs which can easily support new platforms
+- [x] Test coverage
+- [x] Immutable data structure
+- [ ] SVG elliptical arc
+
+## Basic
+
+Use `generator` in `draw` function to specify which shape to render. The returned `CALayer` contains the rendered result in correct `size` and is updated everytime `generator` is instructed.
+
+Here's how to draw a green rectangle
+
+![](Screenshots/green_rectangle.png)
 
 ```swift
-<API>
+let size = Size(width: 300, height: 200)
+let layer = draw(size: size, using: { generator in
+  var options = Options()
+  options.fill = UIColor.green
+  generator.rectangle(x: 80, y: 10, width: 140, height: 100, options: options)
+}
+```
+
+The beauty of `CALayer` is that we can further animate, transform (translate, scale, rotate) and compose them into more powerful shapes.
+
+## Options
+
+`Options` is used to custimize shape. It is immutable struct and apply to one shape at a time. The following properties are configurable
+
+- maxRandomnessOffset
+- oughness
+- bowing
+- fill
+- stroke
+- strokeWidth
+- curveTightness
+- curveStepCount
+- fillStyle
+- fillWeight
+- hachureAngle
+- hachureGap
+- dashOffset
+- dashGap
+- zigzagOffset
+
+## Fill style
+
+Most of the time, we use `fill` for solid fill color inside shape, `stroke` for shape border, and `fillStyle` for sketchy fill style.
+
+Here's how to draw circles in different fill styles. The default fill style is hachure
+
+![](Screenshots/circles.png)
+
+```swift
+let layer = draw(size: size, using: { generator in
+  var options = Options()
+  options.stroke = UIColor.blue
+  
+  options.fill = UIColor.red
+  options.fillStyle = .crossHatch
+  generator.circle(x: 100, y: 100, diameter: 100, options: options)
+    
+  options.fill = UIColor.green
+  options.fillStyle = .dashed
+  generator.circle(x: 230, y: 100, diameter: 100, options: options)
+    
+  options.fill = UIColor.purple
+  options.fillStyle = .dots
+  generator.circle(x: 350, y: 100, diameter: 100, options: options)
+    
+  options.fill = UIColor.cyan
+  options.fillStyle = .hachure
+  generator.circle(x: 480, y: 100,  diameter: 100, options: options)
+  
+  options.fill = UIColor.orange
+  options.fillStyle = .solid
+  generator.circle(x: 100, y: 300,  diameter: 100, options: options)
+  
+  options.fill = UIColor.gray
+  options.fillStyle = .starBurst
+  generator.circle(x: 230, y: 300, diameter: 100, options: options)
+    
+  options.fill = UIColor.yellow
+  options.fillStyle = .zigzag
+  generator.circle(x: 350, y: 300,  diameter: 100, options: options)
+  
+  options.fill = UIColor.blue
+  options.fillStyle = .zigzagLine
+  generator.circle(x: 480, y: 300, diameter: 100, options: options)
+})
+```
+
+## SVG
+
+![](Screenshots/svg.png)
+
+SVG shape can be bigger or smaller than the specifed layer size, so RoughSwift scales them to your requested `size`. This way we can compose and transform the SVG shape.
+
+```swift
+let bird = draw(size: CGSize(width: 150, height: 150), using: { generator in
+  var options = Options()
+  options.stroke = UIColor.brown
+  options.fill = UIColor.red
+  let apple = "M85 32C115 68 239 170 281 192 311 126 274 43 244 0c97 58 146 167 121 254 28 28 40 89 29 108 -25-45-67-39-93-24C176 409 24 296 0 233c68 56 170 65 226 27C165 217 56 89 36 54c42 38 116 96 161 122C159 137 108 72 85 32z"
+  generator.path(d: apple, options: options)
+})
+
+bird.frame.origin = CGPoint(x: 100, y: 100)
+```
+
+
+## Advance with Drawable, Generator and Renderer
+
+Behind the screen, `draw` function composes `Generator` and `Renderer`. We don't really need to know this detail but it's good to know in case we want more fine grained control. 
+
+We can instantiate `Engine` or use a shared `Engine` for memory efficiency, to make `Generator`. Every time we instruct `Generator` to draw a shape, the engine works hard to figure out information about the sketchy shape in `Drawable`.
+
+The name of these concepts follow `rough.js` for better code reasoning.
+
+For iOS, there is a `Renderer` that can handle `Drawable` and transform it into `UIBezierPath` and `CALayer`. There will be more `Renderer` that can render into graphics context, image and for other platforms like macOS and watchOS.
+
+
+```swift
+let layer = CALayer()
+  
+let generator = Engine.shared.generator(size: size)
+let renderer = Renderer(layer: layer)
+generator.onDrawable = renderer.handle
 ```
 
 ## Installation
@@ -41,6 +170,11 @@ github "onmyway133/RoughSwift"
 ## Author
 
 Khoa Pham, onmyway133@gmail.com
+
+## Credit
+
+- [rough](https://github.com/pshihn/rough) for the generator that powers RoughSwift. All the hard work is done via rough in JavascriptCore.
+- [SVGPath](https://github.com/timrwood/SVGPath) for constructing UIBezierPath from SVG path
 
 ## Contributing
 
