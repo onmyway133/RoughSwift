@@ -22,7 +22,7 @@ RoughSwift allows us to easily make shapes in hand drawn, sketchy, comic style. 
 - [x] Convenient draw functions
 - [x] Platform independant APIs which can easily support new platforms
 - [x] Test coverage
-- [x] Immutable data structure
+- [x] Immutable and type safe data structure
 - [ ] SVG elliptical arc
 
 ## Basic
@@ -63,6 +63,20 @@ The beauty of `CALayer` is that we can further animate, transform (translate, sc
 - dashOffset
 - dashGap
 - zigzagOffset
+
+## Shapes
+
+RoughSwift supports all primitive shapes, including SVG path
+
+- line
+- rectangle
+- ellipse
+- circle
+- linearPath
+- arc
+- curve
+- polygon
+- path
 
 ## Fill style
 
@@ -127,6 +141,24 @@ let bird = draw(size: CGSize(width: 150, height: 150), using: { generator in
 })
 
 bird.frame.origin = CGPoint(x: 100, y: 100)
+```
+
+## Creative shapes
+
+With all the primitive shapes, we can create more beautiful things. The only limit is your imaginary. 
+
+Here's how to create chart
+
+![](Screenshots/chart.png)
+
+```swift
+let width: Float = 50
+  var options = Options()
+  options.fill = UIColor.yellow
+  Array(0..<10).forEach { i in
+    let height = Float(arc4random_uniform(150))
+    generator.rectangle(x: Float(i) * width + 100, y: 470 - height, width: width, height: height, options: options)
+}
 ```
 
 
