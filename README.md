@@ -35,7 +35,7 @@ Here's how to draw a green rectangle
 ![](Screenshots/green_rectangle.png)
 
 ```swift
-let size = Size(width: 300, height: 200)
+let size = CGSize(width: 300, height: 200)
 let layer = draw(size: size, using: { generator in
   var options = Options()
   options.fill = UIColor.green
