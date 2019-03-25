@@ -50,7 +50,7 @@ The beauty of `CALayer` is that we can further animate, transform (translate, sc
 `Options` is used to custimize shape. It is immutable struct and apply to one shape at a time. The following properties are configurable
 
 - maxRandomnessOffset
-- oughness
+- toughness
 - bowing
 - fill
 - stroke
