@@ -83,6 +83,17 @@ RoughSwift supports all primitive shapes, including SVG path
 
 Most of the time, we use `fill` for solid fill color inside shape, `stroke` for shape border, and `fillStyle` for sketchy fill style.
 
+Available fill styles
+
+- crossHatch
+- dashed
+- dots
+- hachure
+- solid
+- starBurst
+- zigzag
+- zigzagLine
+
 Here's how to draw circles in different fill styles. The default fill style is hachure
 
 ![](Screenshots/circles.png)
