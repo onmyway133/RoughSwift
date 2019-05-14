@@ -35,7 +35,7 @@ Here's how to draw a green rectangle
 ![](Screenshots/green_rectangle.png)
 
 ```swift
-let size = Size(width: 300, height: 200)
+let size = CGSize(width: 300, height: 200)
 let layer = draw(size: size, using: { generator in
   var options = Options()
   options.fill = UIColor.green
@@ -50,7 +50,7 @@ The beauty of `CALayer` is that we can further animate, transform (translate, sc
 `Options` is used to custimize shape. It is immutable struct and apply to one shape at a time. The following properties are configurable
 
 - maxRandomnessOffset
-- oughness
+- toughness
 - bowing
 - fill
 - stroke
@@ -82,6 +82,17 @@ RoughSwift supports all primitive shapes, including SVG path
 ## Fill style
 
 Most of the time, we use `fill` for solid fill color inside shape, `stroke` for shape border, and `fillStyle` for sketchy fill style.
+
+Available fill styles
+
+- crossHatch
+- dashed
+- dots
+- hachure
+- solid
+- starBurst
+- zigzag
+- zigzagLine
 
 Here's how to draw circles in different fill styles. The default fill style is hachure
 
