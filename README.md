@@ -1,5 +1,14 @@
 ![](Screenshots/s.png)
 
+❤️ Support my app ❤️ 
+
+- [Push Hero - pure Swift native macOS application to test push notifications](https://www.producthunt.com/posts/push-hero-2)
+- [Quick Access - Organise files in the Mac menu bar](https://www.producthunt.com/posts/quick-access)
+- [Frame recorder - Recorder gif and video with frame](https://www.producthunt.com/posts/frame-recorder)
+- [Other apps](https://onmyway133.github.io/projects/)
+
+❤️❤️😇😍🤘❤️❤️
+
 [![Version](https://img.shields.io/cocoapods/v/RoughSwift.svg?style=flat)](http://cocoadocs.org/docsets/RoughSwift)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/RoughSwift.svg?style=flat)](http://cocoadocs.org/docsets/RoughSwift)
