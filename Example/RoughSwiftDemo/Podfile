@@ -1,8 +1,0 @@
-use_frameworks!
-
-platform :ios, '9.0'
-
-target 'RoughSwiftDemo' do
- pod 'RoughSwift', path: '../../'
-end
-
