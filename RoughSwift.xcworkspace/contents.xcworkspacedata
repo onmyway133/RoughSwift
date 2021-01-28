@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Playground-iOS.playground">
+      location = "group:../../Downloads/MyPlayground.playground">
    </FileRef>
    <FileRef
       location = "group:RoughSwift.xcodeproj">
