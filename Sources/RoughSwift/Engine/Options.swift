@@ -46,30 +46,29 @@ public struct Options {
             "zigzagOffset": zigzagOffset
         ]
     }
+}
 
-    static func from(dictionary: JSONDictionary) -> Options {
-        var options = Options()
-        options.maxRandomnessOffset <-? (dictionary["maxRandomnessOffset"] as? NSNumber)?.floatValue
-        options.roughness <-? (dictionary["roughness"] as? NSNumber)?.floatValue
-        options.bowing <-? (dictionary["bowing"] as? NSNumber)?.floatValue
-        options.strokeWidth <-? (dictionary["strokeWidth"] as? NSNumber)?.floatValue
-        options.curveTightness <-? (dictionary["curveTightness"] as? NSNumber)?.floatValue
-        options.curveStepCount <-? (dictionary["curveStepCount"] as? NSNumber)?.floatValue
-        options.fillWeight <-? (dictionary["fillWeight"] as? NSNumber)?.floatValue
-        options.hachureAngle <-? (dictionary["hachureAngle"] as? NSNumber)?.floatValue
-        options.hachureGap <-? (dictionary["hachureGap"] as? NSNumber)?.floatValue
-        options.dashOffset <-? (dictionary["dashOffset"] as? NSNumber)?.floatValue
-        options.dashGap <-? (dictionary["dashGap"] as? NSNumber)?.floatValue
-        options.zigzagOffset <-? (dictionary["zigzagOffset"] as? NSNumber)?.floatValue
+public extension Options {
+    init(dictionary: JSONDictionary) {
+        maxRandomnessOffset <-? (dictionary["maxRandomnessOffset"] as? NSNumber)?.floatValue
+        roughness <-? (dictionary["roughness"] as? NSNumber)?.floatValue
+        bowing <-? (dictionary["bowing"] as? NSNumber)?.floatValue
+        strokeWidth <-? (dictionary["strokeWidth"] as? NSNumber)?.floatValue
+        curveTightness <-? (dictionary["curveTightness"] as? NSNumber)?.floatValue
+        curveStepCount <-? (dictionary["curveStepCount"] as? NSNumber)?.floatValue
+        fillWeight <-? (dictionary["fillWeight"] as? NSNumber)?.floatValue
+        hachureAngle <-? (dictionary["hachureAngle"] as? NSNumber)?.floatValue
+        hachureGap <-? (dictionary["hachureGap"] as? NSNumber)?.floatValue
+        dashOffset <-? (dictionary["dashOffset"] as? NSNumber)?.floatValue
+        dashGap <-? (dictionary["dashGap"] as? NSNumber)?.floatValue
+        zigzagOffset <-? (dictionary["zigzagOffset"] as? NSNumber)?.floatValue
 
         if let fillStyleRawValue = dictionary["fillStyle"] as? String,
            let fillStyle = FillStyle(rawValue: fillStyleRawValue) {
-            options.fillStyle = fillStyle
+            self.fillStyle = fillStyle
         }
 
-        options.stroke <-? (dictionary["stroke"] as? String).map(UIColor.init(hex:))
-        options.fill <-? (dictionary["fill"] as? String).map(UIColor.init(hex:))
-
-        return options
+        stroke <-? (dictionary["stroke"] as? String).map(UIColor.init(hex:))
+        fill <-? (dictionary["fill"] as? String).map(UIColor.init(hex:))
     }
 }

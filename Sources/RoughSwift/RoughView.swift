@@ -5,26 +5,32 @@
 //  Created by khoa on 26/03/2022.
 //
 
+import UIKit
 import SwiftUI
 
 public struct RoughView: UIViewRepresentable {
-    private var options = Options()
+    @State private var options = Options()
 
-    public func makeUIView(context: Context) -> some UIView {
-        let view = UIView()
+    public init() {}
+
+    public func makeUIView(context: Context) -> UIView {
+        let view = RoughUIView()
         return view
     }
 
-    public func updateUIView(_ uiView: UIViewType, context: Context) {
-
+    public func updateUIView(_ uiView: UIView, context: Context) {
+        guard let view = uiView as? RoughUIView else { return }
+        view.doSomethin()
     }
 }
 
 public extension RoughView {
     func maxRandomnessOffset(_ value: Float) -> Self {
-        var v = self
-        v.options.maxRandomnessOffset = value
-        return v
+        options.maxRandomnessOffset = value
+        return self
+//        var v = self
+//        v.options.maxRandomnessOffset = value
+//        return v
     }
 
     func roughness(_ value: Float) -> Self {
@@ -109,5 +115,22 @@ public extension RoughView {
         var v = self
         v.options.fillStyle = value
         return v
+    }
+}
+
+private final class RoughUIView: UIView {
+    func doSomethin() {
+        print("doSomething", frame)
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        layer.sublayers?.forEach {
+            $0.removeFromSuperlayer()
+        }
+
+        let renderer = Renderer(layer: layer)
+        print("layoutSubviews", frame)
     }
 }

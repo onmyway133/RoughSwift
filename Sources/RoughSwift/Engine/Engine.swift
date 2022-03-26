@@ -25,7 +25,7 @@ public class Engine {
         context.evaluateScript(content)
 
         context.exceptionHandler = { context, exception in
-            print(exception!.toString())
+            print(exception!.toString() as Any)
         }
 
         rough = context.objectForKeyedSubscript("rough")!

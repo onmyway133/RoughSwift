@@ -9,10 +9,18 @@ import SwiftUI
 import RoughSwift
 
 struct ContentView: View {
+    @State private var flag = false
     var body: some View {
         VStack {
             RoughView()
-                .frame(width: 100, height: 100)
+                .maxRandomnessOffset(flag ? 10 : 20)
+                .roughness(flag ? 1 : 2)
+                .frame(width: flag ? 200 : 100, height: flag ? 200 : 100)
+            Button(action: {
+                flag.toggle()
+            }) {
+                Text("click")
+            }
         }
     }
 }

@@ -17,9 +17,9 @@ public class Renderer {
         self.layer = layer
     }
 
-    public func handle(drawable: Drawable) {
-        let pairs = drawable.sets.map({
-            return ($0, self.shapeLayer(set: $0, options: drawable.options))
+    public func render(drawing: Drawing) {
+        let pairs = drawing.sets.map({
+            return ($0, self.shapeLayer(set: $0, options: drawing.options))
         })
 
         pairs.forEach { pair in
@@ -28,7 +28,7 @@ public class Renderer {
             shapeLayer.frame = layer.bounds
         }
 
-        handlePath2DIfAny(pairs: pairs, options: drawable.options)
+        handlePath2DIfAny(pairs: pairs, options: drawing.options)
     }
 
     private func shapeLayer(set: OperationSet, options: Options) -> CAShapeLayer {

@@ -11,6 +11,7 @@
 		D2C5CBF327EF63D300BBE97D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C5CBF227EF63D200BBE97D /* ContentView.swift */; };
 		D2C5CBF527EF63D500BBE97D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2C5CBF427EF63D500BBE97D /* Assets.xcassets */; };
 		D2C5CBF827EF63D500BBE97D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2C5CBF727EF63D500BBE97D /* Preview Assets.xcassets */; };
+		D2C5CC0227EFABEB00BBE97D /* RoughSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D2C5CC0127EFABEB00BBE97D /* RoughSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2C5CC0227EFABEB00BBE97D /* RoughSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +41,7 @@
 				D2C5CBFE27EF63E900BBE97D /* Packages */,
 				D2C5CBEF27EF63D200BBE97D /* RoughSwiftApp */,
 				D2C5CBEE27EF63D200BBE97D /* Products */,
+				D2C5CC0027EFABEB00BBE97D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +80,13 @@
 			name = Packages;
 			sourceTree = "<group>";
 		};
+		D2C5CC0027EFABEB00BBE97D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -93,6 +103,9 @@
 			dependencies = (
 			);
 			name = RoughSwiftApp;
+			packageProductDependencies = (
+				D2C5CC0127EFABEB00BBE97D /* RoughSwift */,
+			);
 			productName = RoughSwiftApp;
 			productReference = D2C5CBED27EF63D200BBE97D /* RoughSwiftApp.app */;
 			productType = "com.apple.product-type.application";
@@ -351,6 +364,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D2C5CC0127EFABEB00BBE97D /* RoughSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RoughSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D2C5CBE527EF63D200BBE97D /* Project object */;
 }
