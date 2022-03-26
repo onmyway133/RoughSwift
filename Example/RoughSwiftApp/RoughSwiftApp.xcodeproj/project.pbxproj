@@ -12,6 +12,7 @@
 		D2C5CBF527EF63D500BBE97D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2C5CBF427EF63D500BBE97D /* Assets.xcassets */; };
 		D2C5CBF827EF63D500BBE97D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2C5CBF727EF63D500BBE97D /* Preview Assets.xcassets */; };
 		D2C5CC0227EFABEB00BBE97D /* RoughSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D2C5CC0127EFABEB00BBE97D /* RoughSwift */; };
+		D2C5CC0527EFCDA100BBE97D /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C5CC0427EFCDA100BBE97D /* PlayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		D2C5CBF427EF63D500BBE97D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2C5CBF727EF63D500BBE97D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D2C5CBFF27EF63E900BBE97D /* RoughSwift */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = RoughSwift; path = ../..; sourceTree = "<group>"; };
+		D2C5CC0427EFCDA100BBE97D /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				D2C5CBF027EF63D200BBE97D /* RoughSwiftAppApp.swift */,
 				D2C5CBF227EF63D200BBE97D /* ContentView.swift */,
+				D2C5CC0427EFCDA100BBE97D /* PlayView.swift */,
 				D2C5CBF427EF63D500BBE97D /* Assets.xcassets */,
 				D2C5CBF627EF63D500BBE97D /* Preview Content */,
 			);
@@ -160,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2C5CC0527EFCDA100BBE97D /* PlayView.swift in Sources */,
 				D2C5CBF327EF63D300BBE97D /* ContentView.swift in Sources */,
 				D2C5CBF127EF63D200BBE97D /* RoughSwiftAppApp.swift in Sources */,
 			);

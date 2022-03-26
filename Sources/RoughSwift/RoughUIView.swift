@@ -21,8 +21,6 @@ final class RoughUIView: UIView {
                 update(drawables: drawbles, options: options)
             }
         }
-
-        print("layoutSubviews", bounds)
     }
 
     func update(drawables: [Drawable], options: Options) {
@@ -37,7 +35,5 @@ final class RoughUIView: UIView {
                 renderer.render(drawing: drawing)
             }
         }
-
-        print("update", bounds)
     }
 }
