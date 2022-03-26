@@ -38,6 +38,18 @@ public struct Rectangle: Drawable {
     let y: Float
     let width: Float
     let height: Float
+
+    public init(
+        x: Float,
+        y: Float,
+        width: Float,
+        height: Float
+    ) {
+        self.x = x
+        self.y = y
+        self.width = width
+        self.height = height
+    }
 }
 
 public struct Ellipse: Drawable {
@@ -53,6 +65,18 @@ public struct Ellipse: Drawable {
     let y: Float
     let width: Float
     let height: Float
+
+    public init(
+        x: Float,
+        y: Float,
+        width: Float,
+        height: Float
+    ) {
+        self.x = x
+        self.y = y
+        self.width = width
+        self.height = height
+    }
 }
 
 public struct Circle: Drawable {
@@ -67,6 +91,16 @@ public struct Circle: Drawable {
     let x: Float
     let y: Float
     let diameter: Float
+
+    public init(
+        x: Float,
+        y: Float,
+        diameter: Float
+    ) {
+        self.x = x
+        self.y = y
+        self.diameter = diameter
+    }
 }
 
 public struct LinearPath: Drawable {
@@ -77,6 +111,12 @@ public struct LinearPath: Drawable {
     }
 
     let points: [Point]
+
+    public init(
+        points: [Point]
+    ) {
+        self.points = points
+    }
 }
 
 public struct Arc: Drawable {
@@ -95,7 +135,25 @@ public struct Arc: Drawable {
     let height: Float
     let start: Float
     let stop: Float
-    var closed: Bool = false
+    var closed: Bool
+
+    public init(
+        x: Float,
+        y: Float,
+        width: Float,
+        height: Float,
+        start: Float,
+        stop: Float,
+        closed: Bool = false
+    ) {
+        self.x = x
+        self.y = y
+        self.width = width
+        self.height = height
+        self.start = start
+        self.stop = stop
+        self.closed = closed
+    }
 }
 
 public struct Curve: Drawable {
@@ -106,6 +164,12 @@ public struct Curve: Drawable {
     }
 
     let points: [Point]
+
+    public init(
+        points: [Point]
+    ) {
+        self.points = points
+    }
 }
 
 public struct Polygon: Drawable {
@@ -116,6 +180,12 @@ public struct Polygon: Drawable {
     }
 
     let points: [Point]
+
+    public init(
+        points: [Point]
+    ) {
+        self.points = points
+    }
 }
 
 public struct Path: Drawable {
@@ -128,4 +198,35 @@ public struct Path: Drawable {
     }
 
     let d: String
+
+    public init(
+        d: String
+    ) {
+        self.d = d
+    }
+}
+
+protocol Fullable {
+    func arguments(size: Size) -> [Any]
+}
+
+struct FullRectangle: Drawable, Fullable {
+    var method: String { "rectangle"}
+    var arguments: [Any] { [] }
+    func arguments(size: Size) -> [Any] {
+        [
+            0, 0, size.width, size.height
+        ]
+    }
+}
+
+struct FullCircle: Drawable, Fullable {
+    var method: String { "circle" }
+    var arguments: [Any] { [] }
+
+    func arguments(size: Size) -> [Any] {
+        [
+            size.width / 2, size.height / 2, min(size.width, size.height)
+        ]
+    }
 }

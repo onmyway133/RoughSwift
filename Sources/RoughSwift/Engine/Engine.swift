@@ -38,6 +38,6 @@ public class Engine {
         ]
 
         let value = rough.invokeMethod("generator", withArguments: [drawingSurface])!
-        return Generator(generator: value)
+        return Generator(size: size, jsValue: value)
     }
 }

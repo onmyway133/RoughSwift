@@ -9,7 +9,8 @@ import UIKit
 import SwiftUI
 
 public struct RoughView: UIViewRepresentable {
-    @State private var options = Options()
+    var options = Options()
+    var drawables: [Drawable] = []
 
     public init() {}
 
@@ -20,17 +21,17 @@ public struct RoughView: UIViewRepresentable {
 
     public func updateUIView(_ uiView: UIView, context: Context) {
         guard let view = uiView as? RoughUIView else { return }
-        view.doSomethin()
+        view.drawbles = drawables
+        view.options = options
+        view.update(drawables: drawables, options: options)
     }
 }
 
 public extension RoughView {
     func maxRandomnessOffset(_ value: Float) -> Self {
-        options.maxRandomnessOffset = value
-        return self
-//        var v = self
-//        v.options.maxRandomnessOffset = value
-//        return v
+        var v = self
+        v.options.maxRandomnessOffset = value
+        return v
     }
 
     func roughness(_ value: Float) -> Self {
@@ -116,21 +117,18 @@ public extension RoughView {
         v.options.fillStyle = value
         return v
     }
-}
 
-private final class RoughUIView: UIView {
-    func doSomethin() {
-        print("doSomething", frame)
+    func draw(_ drawable: Drawable) -> Self {
+        var v = self
+        v.drawables.append(drawable)
+        return v
     }
 
-    override func layoutSubviews() {
-        super.layoutSubviews()
+    func rectangle() -> Self {
+        draw(FullRectangle())
+    }
 
-        layer.sublayers?.forEach {
-            $0.removeFromSuperlayer()
-        }
-
-        let renderer = Renderer(layer: layer)
-        print("layoutSubviews", frame)
+    func circle() -> Self {
+        draw(FullCircle())
     }
 }

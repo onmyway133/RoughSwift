@@ -9,16 +9,28 @@
 import JavaScriptCore
 
 public class Generator {
+    private let size: CGSize
     private let jsValue: JSValue
 
-    public init(generator: JSValue) {
-        self.jsValue = generator
+    public init(
+        size: CGSize,
+        jsValue: JSValue
+    ) {
+        self.size = size
+        self.jsValue = jsValue
     }
 
     public func generate(drawable: Drawable, options: Options = .init()) -> Drawing? {
-        jsValue.invokeMethod(
+        let arguments: [Any]
+        if let fullable = drawable as? Fullable {
+            arguments = fullable.arguments(size: size.toSize)
+        } else {
+            arguments = drawable.arguments
+        }
+
+        return jsValue.invokeMethod(
             drawable.method,
-            withArguments: drawable.arguments + [options.toRoughDictionary()]
+            withArguments: arguments + [options.toRoughDictionary()]
         ).toDrawing
     }
 }
@@ -26,5 +38,11 @@ public class Generator {
 private extension JSValue {
     var toDrawing: Drawing? {
         Drawing(roughDrawing: self)
+    }
+}
+
+private extension CGSize {
+    var toSize: Size {
+        Size(width: Float(width), height: Float(height))
     }
 }
