@@ -112,7 +112,7 @@ public class Generator {
             return
         }
 
-        guard let drawable = Drawable.from(dictionary: dictionary) else {
+        guard let drawable = Drawable(dictionary: dictionary) else {
             return
         }
 

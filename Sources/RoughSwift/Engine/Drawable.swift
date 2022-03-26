@@ -13,8 +13,10 @@ public struct Drawable {
     public let shape: String
     public let sets: [OperationSet]
     public let options: Options
-    
-    public static func from(dictionary: JSONDictionary) -> Drawable? {
+}
+
+public extension Drawable {
+    init?(dictionary: JSONDictionary) {
         guard
             let shape = dictionary["shape"] as? String,
             let sets = dictionary["sets"] as? JSONArray,
@@ -22,11 +24,11 @@ public struct Drawable {
         else {
             return nil
         }
-        
-        return Drawable(
+
+        self.init(
             shape: shape,
             sets: sets.compactMap({ OperationSet.from(dictionary: $0) }),
-            options: Options.from(dictionary: options)
+            options: Options(dictionary: options)
         )
     }
 }
