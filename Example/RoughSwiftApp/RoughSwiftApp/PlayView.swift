@@ -12,21 +12,18 @@ struct PlayView: View {
     var heights: [CGFloat] {
         Array(0 ..< 10).map { _ in CGFloat.random(in: 0 ..< 150) }
     }
-
     var body: some View {
         HStack {
             ForEach(0 ..< 10) { index in
                 VStack {
                     Spacer()
                     RoughView()
-                        .fill(.yellow)
+                        .fill(.orange)
                         .rectangle()
                         .frame(height: heights[index])
                 }
             }
         }
-        .padding(.horizontal)
-        .padding(.bottom, 100)
     }
 }
 
