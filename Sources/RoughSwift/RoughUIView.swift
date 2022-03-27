@@ -17,13 +17,15 @@ final class RoughUIView: UIView {
         super.layoutSubviews()
 
         if previousBounds != bounds {
+            previousBounds = bounds
+
             if let drawbles = drawbles, let options = options {
                 update(drawables: drawbles, options: options)
             }
         }
     }
 
-    func update(drawables: [Drawable], options: Options) {
+    private func update(drawables: [Drawable], options: Options) {
         layer.sublayers?.forEach {
             $0.removeFromSuperlayer()
         }

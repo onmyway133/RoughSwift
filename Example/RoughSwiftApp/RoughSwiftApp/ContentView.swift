@@ -25,7 +25,33 @@ struct ContentView: View {
                 .tabItem {
                     Label("SVG", systemImage: "swift")
                 }
+
+            CustomizeView()
+                .tabItem {
+                    Label("Customize", systemImage: "paintbrush.pointed.fill")
+                }
         }
+    }
+}
+
+struct CustomizeView: View {
+    @State var flag = false
+
+    var body: some View {
+        VStack {
+            Button(action: {
+                flag.toggle()
+            }) {
+                Text("Click")
+            }
+
+            RoughView()
+                .fill(flag ? UIColor.green : UIColor.yellow)
+                .fillStyle(flag ? .hachure : .dots)
+                .circle()
+                .frame(width: flag ? 200 : 100, height: flag ? 200 : 100)
+        }
+
     }
 }
 

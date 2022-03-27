@@ -23,7 +23,7 @@ public struct RoughView: UIViewRepresentable {
         guard let view = uiView as? RoughUIView else { return }
         view.drawbles = drawables
         view.options = options
-        view.update(drawables: drawables, options: options)
+        view.setNeedsLayout()
     }
 }
 
