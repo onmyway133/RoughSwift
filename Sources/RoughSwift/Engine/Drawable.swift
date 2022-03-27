@@ -206,11 +206,11 @@ public struct Path: Drawable {
     }
 }
 
-protocol Fullable {
+protocol Fulfillable {
     func arguments(size: Size) -> [Any]
 }
 
-struct FullRectangle: Drawable, Fullable {
+struct FullRectangle: Drawable, Fulfillable {
     var method: String { "rectangle"}
     var arguments: [Any] { [] }
     func arguments(size: Size) -> [Any] {
@@ -220,7 +220,7 @@ struct FullRectangle: Drawable, Fullable {
     }
 }
 
-struct FullCircle: Drawable, Fullable {
+struct FullCircle: Drawable, Fulfillable {
     var method: String { "circle" }
     var arguments: [Any] { [] }
 

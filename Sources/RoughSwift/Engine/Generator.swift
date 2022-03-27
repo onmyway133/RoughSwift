@@ -22,7 +22,7 @@ public class Generator {
 
     public func generate(drawable: Drawable, options: Options = .init()) -> Drawing? {
         let arguments: [Any]
-        if let fullable = drawable as? Fullable {
+        if let fullable = drawable as? Fulfillable {
             arguments = fullable.arguments(size: size.toSize)
         } else {
             arguments = drawable.arguments
