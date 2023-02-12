@@ -10,7 +10,19 @@ import UIKit
 
 final class RoughUIView: UIView {
     var drawbles: [Drawable]?
-    var options: Options?
+
+    var options: Options? {
+        didSet {
+            guard options != oldValue else {
+                return
+            }
+            guard let drawbles, let options else {
+                return
+            }
+            update(drawables: drawbles, options: options)
+        }
+    }
+
     var previousBounds: CGRect = .zero
 
     override func layoutSubviews() {
