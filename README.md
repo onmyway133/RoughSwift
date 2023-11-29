@@ -1,12 +1,6 @@
 ![](Screenshots/s.png)
 
-❤️ Support my apps ❤️ 
-
-- [Push Hero - pure Swift native macOS application to test push notifications](https://onmyway133.com/pushhero)
-- [PastePal - Pasteboard, note and shortcut manager](https://onmyway133.com/pastepal)
-- [My other apps](https://onmyway133.com/apps/)
-
-❤️❤️😇😍🤘❤️❤️
+Checkout https://indiegoodies.com/
 
 ![](Screenshots/s1.png)
 
