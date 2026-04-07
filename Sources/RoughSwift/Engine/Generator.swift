@@ -8,7 +8,7 @@
 
 import JavaScriptCore
 
-public class Generator {
+public final class Generator: @unchecked Sendable {
     private let size: CGSize
     private let jsValue: JSValue
 

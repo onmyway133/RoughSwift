@@ -12,7 +12,7 @@ import JavaScriptCore
 public typealias JSONDictionary = [String: Any]
 public typealias JSONArray = [JSONDictionary]
 
-public class Engine {
+public final class Engine: @unchecked Sendable {
     private let context = JSContext()!
     private let rough: JSValue
     

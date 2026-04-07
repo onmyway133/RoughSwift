@@ -1,15 +1,7 @@
-//
-//  Operation.swift
-//  RoughSwift
-//
-//  Created by khoa on 19/03/2019.
-//  Copyright © 2019 Khoa Pham. All rights reserved.
-//
-
 import Foundation
 
 /// Detailed instruction to convert to bezier path
-public class Operation {
+public class Operation: @unchecked Sendable {
     static func from(dictionary: JSONDictionary) -> Operation? {
         guard
             let op = dictionary["op"] as? String,
@@ -35,7 +27,7 @@ public class Operation {
     }
 }
 
-public class Move: Operation {
+public final class Move: Operation, @unchecked Sendable {
     public let point: Point
 
     init(data: [Float]) {
@@ -43,7 +35,7 @@ public class Move: Operation {
     }
 }
 
-public class LineTo: Operation {
+public final class LineTo: Operation, @unchecked Sendable {
     public let point: Point
 
     init(data: [Float]) {
@@ -51,7 +43,7 @@ public class LineTo: Operation {
     }
 }
 
-public class BezierCurveTo: Operation {
+public final class BezierCurveTo: Operation, @unchecked Sendable {
     public let point: Point
     public let controlPoint1: Point
     public let controlPoint2: Point
@@ -64,7 +56,7 @@ public class BezierCurveTo: Operation {
     }
 }
 
-public class QuadraticCurveTo: Operation {
+public final class QuadraticCurveTo: Operation, @unchecked Sendable {
     public let point: Point
     public let controlPoint: Point
 
