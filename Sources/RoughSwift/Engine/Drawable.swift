@@ -23,6 +23,14 @@ public struct Line: Drawable {
 
     let from: Point
     let to: Point
+    
+    public init(
+        from: Point,
+        to: Point
+    ) {
+        self.from = from
+        self.to = to
+    }
 }
 
 public struct Rectangle: Drawable {
