@@ -72,3 +72,27 @@ public extension Options {
         fill <-? (dictionary["fill"] as? String).map(UIColor.init(hex:))
     }
 }
+
+extension Options: Hashable {
+    public static func == (lhs: Options, rhs: Options) -> Bool {
+        lhs.hashValue == rhs.hashValue
+    }
+
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(maxRandomnessOffset)
+        hasher.combine(roughness)
+        hasher.combine(bowing)
+        hasher.combine(fill)
+        hasher.combine(stroke)
+        hasher.combine(strokeWidth)
+        hasher.combine(curveTightness)
+        hasher.combine(curveStepCount)
+        hasher.combine(fillStyle)
+        hasher.combine(fillWeight)
+        hasher.combine(hachureAngle)
+        hasher.combine(hachureGap)
+        hasher.combine(dashOffset)
+        hasher.combine(dashGap)
+        hasher.combine(zigzagOffset)
+    }
+}
